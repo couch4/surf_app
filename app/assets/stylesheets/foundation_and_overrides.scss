@@ -43,7 +43,11 @@
 $body-bg: #fff;
 $body-font-color: #000;
 $body-font-family: "ArialMTLight", Arial, sans-serif;
-letter-spacing: 1.5rem;
+body,input {
+letter-spacing: 0.15rem;
+
+}
+
 // $body-font-weight: normal;
 // $body-font-style: normal;
 

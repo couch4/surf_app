@@ -17,14 +17,11 @@
  @import "foundation_and_overrides";
 
  .top-bar {
-color:#fff;
+color: $label-font-color-alt;
 padding-top:8px;
  }
 
-.top-bar .row{
-max-width:62.5rem !important;
 
-}
 
 .head input {
 margin:0;
@@ -42,7 +39,7 @@ margin:0;
 }
 
 .sub-nav {
- border-top: 1px black solid; 
+ border-top: 1px $primary-color solid; 
   margin: 0 !important;
     padding: 0 !important;
     
@@ -69,8 +66,8 @@ transition: 0.2s ease-in-out all;
 
 .sub-nav li a:hover{
     
-background: #e8e8e8;
-  color: #000 !important;
+background: $secondary-color;
+  color: $primary-color !important;
     
 }
 
