@@ -6,7 +6,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import "foundation/functions","fontface";
 
 // $experimental: true;
 
@@ -36,9 +36,14 @@
 // $total-columns: 12;
 
 // We use these to control various global styles
+
+@include fontFace('ArialMTLight','http://localhost:3000/assets/fonts/ArialMT/ArialMT-Light');
+
+
 $body-bg: #fff;
 $body-font-color: #000;
-$body-font-family: "ArialMT", Arial, sans-serif;
+$body-font-family: "ArialMTLight", Arial, sans-serif;
+letter-spacing: 1.5rem;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 

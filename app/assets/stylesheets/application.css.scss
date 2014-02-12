@@ -14,6 +14,8 @@
  *= require_tree .
  */
 
+ @import "foundation_and_overrides";
+
  .top-bar {
 color:#fff;
 padding-top:8px;
@@ -35,12 +37,59 @@ margin:0;
     
 }
 
+.main-nav {
+ padding:0 1rem;   
+}
+
 .sub-nav {
- border-top: 4px black solid; 
+ border-top: 1px black solid; 
+  margin: 0 !important;
+    padding: 0 !important;
+    
+}
+
+.sub-nav > ul{
+    margin-left:0;
     
     
 }
 
+
+.sub-nav > ul > li{
+margin-bottom:0;
+}
+
+
+.sub-nav li a{
+    padding: 0.5rem 1.12rem !important;
+    display:block;
+transition: 0.2s ease-in-out all;
+    
+}
+
+.sub-nav li a:hover{
+    
+background: #e8e8e8;
+  color: #000 !important;
+    
+}
+
+.sub-nav li:before{
+    position: absolute;
+    margin-left:-2px !important;
+     padding: 0.5rem 0 !important;
+
+    
+}
+
+.main-nav .sub-nav{
+   border-right:1px solid black; 
+}
+.main-nav .end{
+   border-right:none; 
+}
+
+
 .sub-nav dd{
- text-align: justify;   
+  display:inline-block;
 }
