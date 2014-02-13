@@ -52,10 +52,15 @@ $highlight-color: #ef802e;
   margin-bottom:0;
 }
 
-.sub-nav li a {
-  padding: 0.5rem 1.12rem !important;
-  display:block;
-  transition: 0.2s ease-in-out all;   
+
+
+.sub-nav li a{
+    // padding: 0.5rem 1.097rem !important;
+    padding: 0.5rem $row-width/30 !important;
+    display:block;
+transition: 0.2s ease-in-out all;
+    
+
 }
 
 .sub-nav li a:hover {  
