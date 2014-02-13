@@ -642,10 +642,10 @@ $paragraph-font-size: rem-calc(11);
 
 // Off-canvas
 
- $tabbar-bg: #000;
+$tabbar-bg: #000;
 // $tabbar-height: rem-calc(45);
 // $tabbar-line-height: $tabbar-height;
- $tabbar-color: #FFF;
+$tabbar-color: #FFF;
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
@@ -663,7 +663,7 @@ $paragraph-font-size: rem-calc(11);
 // $off-canvas-bg: #333;
 
 // Off Canvas Menu List Variables
-// $off-canvas-label-padding: 0.3rem rem-calc(15);
+$off-canvas-label-padding: 0.03rem rem-calc(15);
 // $off-canvas-label-color: #999;
 // $off-canvas-label-text-transform: uppercase;
 // $off-canvas-label-font-weight: bold;
