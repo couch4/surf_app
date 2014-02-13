@@ -16,6 +16,10 @@
 
  @import "foundation_and_overrides";
 
+$highlight-color: #ef802e;
+
+
+
  .top-bar {
 color: $label-font-color-alt;
 padding-top:8px;
@@ -89,4 +93,19 @@ background: $secondary-color;
 
 .sub-nav dd{
   display:inline-block;
+}
+
+
+input {
+ padding: 0 0.6rem;
+height: 2rem !important;
+width: 98% !important; 
+}
+
+
+
+
+.highlight {
+color: $highlight-color;
+
 }
