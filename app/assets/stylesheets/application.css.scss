@@ -22,20 +22,39 @@ $highlight-color: #ef802e;
 
  .top-bar {
   color: $label-font-color-alt;
-  padding-top:8px;
+  padding-top:6px;
  }
 
-.head input {
+.search-bar{
+
+
+
+input {
   margin:0;
   padding:0 10px;
+  color:$primary-color !important;
 }
+.left{
+position:relative;
+ }
+.fi-magnifying-glass{
+position: absolute;
+right:13px;
+top:6px;
+
+}
+
+  
+}
+
+
 
 .head p {
  margin-bottom:2px;  
 }
 
 .main-nav {
- padding:0 1rem;   
+ padding:0 $column-gutter/2;   
 }
 
 .sub-nav {
@@ -150,7 +169,32 @@ color: $primary-color !important;
 
 
 
+
+
+
+
 .highlight {
 color: $highlight-color;
 
 }
+
+.product-tiles div{
+margin-bottom: rem-calc(10) !important;
+
+}
+
+
+///////////////ICONS 
+
+.fi-magnifying-glass:before {
+font-family: "foundation-icons";
+display: inline-block;
+}
+
+.fi-magnifying-glass:before { content: "\f16c"; }
+
+.size-21 {
+font-size: 21px;
+}
+
+

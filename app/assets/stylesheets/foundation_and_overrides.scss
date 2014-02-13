@@ -31,22 +31,25 @@
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(990);
-// $column-gutter: rem-calc(30);
+$row-width: rem-calc(970);
+ $column-gutter: rem-calc(10);
+
+
 // $total-columns: 12;
 
 // We use these to control various global styles
 
 @include fontFace('ArialMTLight','http://localhost:3000/assets/fonts/ArialMT/ArialMT-Light');
-
+@include fontFace('ArialMT','http://localhost:3000/assets/fonts/ArialMT/ArialMT-Medium');
+@include fontFace('ArialMTBlack','http://localhost:3000/assets/fonts/ArialMT/ArialMT-Black');
+@include fontFace('foundation-icons','http://localhost:3000/assets/fonts/icons/foundation-icons');
 
 $body-bg: #fff;
 $body-font-color: #000;
-$body-font-family: "ArialMTLight", Arial, sans-serif;
-body,input {
-letter-spacing: 0.15rem;
+$body-font-family: "ArialMTMedium", Arial, sans-serif;
 
-}
+
+
 
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -134,12 +137,26 @@ $secondary-color: #e8e8e8;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+ $h1-font-size: rem-calc(24);
+ $h2-font-size: rem-calc(22);
+ $h3-font-size: rem-calc(18);
+ $h4-font-size: rem-calc(16);
+ $h5-font-size: rem-calc(14);
+ $h6-font-size: rem-calc(12);
+
+
+a,input,h1,h2,h3,h4,h5,h6 {
+letter-spacing: 0.15rem;
+text-transform:uppercase;
+color: $primary-color;
+font-family: "ArialMTLight";
+
+ }
+
+ h1,h2,h3 {
+font-family: "ArialMTBlack";
+
+ }
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -155,7 +172,7 @@ $secondary-color: #e8e8e8;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-$paragraph-font-size: rem-calc(11);
+$paragraph-font-size: rem-calc(12);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -176,8 +193,9 @@ $paragraph-font-size: rem-calc(11);
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
-// $hr-margin: rem-calc(20);
+ $hr-border-color: $primary-color;
+ $hr-margin: rem-calc(20);
+
 
 // We use these to style lists
 // $list-style-position: outside;
@@ -1204,5 +1222,8 @@ $topbar-color: #fff;
 //
 
 // $include-html-visibility-classes: $include-html-classes;
+
+
+
 
 @import 'foundation';
