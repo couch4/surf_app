@@ -18,9 +18,16 @@
 
 $highlight-color: #ef802e;
 
+body,html {
+  height:100%;
+  width:100%;
+}
 
+.off-canvas-wrap,.inner-wrap {
+  height:100%;   
+}
 
- .top-bar {
+.top-bar {
   color: $label-font-color-alt;
   padding-top:8px;
  }
@@ -63,9 +70,7 @@ $highlight-color: #ef802e;
   
 }
 
-
-
-.sub-nav li a{
+.sub-nav li a {
     // padding: 0.5rem 1.097rem !important;
     // padding: 0.5rem $row-width/56.4 !important;
     text-align: center;
@@ -73,8 +78,6 @@ $highlight-color: #ef802e;
     display:block;
 transition: 0.2s ease-in-out all;
 width:100%;
-    
-
 }
 
 .sub-nav li a:hover {  
@@ -147,10 +150,6 @@ border: solid 1px $primary-color !important;
 color: $primary-color !important;
 }
 
-
-
-
 .highlight {
 color: $highlight-color;
-
 }
