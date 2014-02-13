@@ -41,24 +41,38 @@ $highlight-color: #ef802e;
 .sub-nav {
   border-top: 1px $primary-color solid; 
   margin: 0 !important;
-  padding: 0 !important;   
+  padding: 0 !important;  
+
 }
 
-.sub-nav > ul {
-  margin-left:0;    
+.main-nav .sub-nav > ul {
+  margin:0; 
+  text-align: justify; 
+  height:2rem;  
+}
+
+.sub-nav > ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
 }
 
 .sub-nav > ul > li {
   margin-bottom:0;
+  display:inline-block;
+  
 }
 
 
 
 .sub-nav li a{
     // padding: 0.5rem 1.097rem !important;
-    padding: 0.5rem $row-width/30 !important;
+    // padding: 0.5rem $row-width/56.4 !important;
+    text-align: center;
+    // padding: 0.5rem 0 !important;
     display:block;
 transition: 0.2s ease-in-out all;
+width:100%;
     
 
 }
@@ -74,23 +88,63 @@ transition: 0.2s ease-in-out all;
   padding: 0.5rem 0 !important;
 }
 
-.main-nav .sub-nav {
-  border-right:1px solid black; 
+.main-nav .column{
+padding:0;
 }
 
-.main-nav .end {
+.main-nav .sub-nav {
+  border-right:1px solid $primary-color; 
+  width:100%;
+  float:left;
+}
+
+.main-nav .menu-1 {
+width:45%;
+display:inline-block;
+margin:0;
+padding:0;
+}
+
+.main-nav .menu-2 {
+width:35%;
+display:inline-block;
+margin:0;
+padding:0;
+}
+
+.main-nav .menu-3 {
+width:20%;
+display:inline-block;
+margin:0;
+padding:0;
+}
+
+
+.main-nav .menu-1 li a{
+padding: 0.5rem 1.123rem !important;
+
+}
+
+.main-nav .menu-2 li a{
+padding: 0.5rem 0.975rem !important;
+}
+
+.main-nav .menu-3 li a{
+padding: 0.5rem 1.26rem !important;
+}
+
+.main-nav .menu-3 {
   border-right:none; 
 }
 
-.sub-nav dd {
-  display:inline-block;
-}
 
 
 input {
  padding: 0 0.6rem;
 height: 2rem !important;
 width: 98% !important; 
+border: solid 1px $primary-color !important;
+color: $primary-color !important;
 }
 
 
