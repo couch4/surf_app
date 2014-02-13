@@ -18,9 +18,16 @@
 
 $highlight-color: #ef802e;
 
+body,html {
+  height:100%;
+  width:100%;
+}
 
+.off-canvas-wrap,.inner-wrap {
+  height:100%;   
+}
 
- .top-bar {
+.top-bar {
   color: $label-font-color-alt;
   padding-top:8px;
  }
@@ -52,15 +59,11 @@ $highlight-color: #ef802e;
   margin-bottom:0;
 }
 
-
-
-.sub-nav li a{
+.sub-nav li a {
     // padding: 0.5rem 1.097rem !important;
     padding: 0.5rem $row-width/30 !important;
     display:block;
 transition: 0.2s ease-in-out all;
-    
-
 }
 
 .sub-nav li a:hover {  
@@ -93,10 +96,6 @@ height: 2rem !important;
 width: 98% !important; 
 }
 
-
-
-
 .highlight {
 color: $highlight-color;
-
 }
