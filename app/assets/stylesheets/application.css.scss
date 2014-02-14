@@ -191,6 +191,9 @@ display: inline-block;
 font-size: 21px;
 }
 
+.tabs-content {
+  margin-top: rem-calc(10);  
+}
 
 .tabs-content li {
   list-style: none;
