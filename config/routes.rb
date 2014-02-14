@@ -5,6 +5,8 @@ SurfApp::Application.routes.draw do
 root 'home#index'
 get 'home' => 'home#home'
 get 'mobile' => 'home#mobile'
+get 'mobile_swap' => 'home#mobile_swap'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
