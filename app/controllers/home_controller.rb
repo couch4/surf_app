@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   def home
     render layout: false
   end
-  def mobile
+  def mobile_swap
     render layout: false
   end
 end
