@@ -226,6 +226,54 @@ h2{
 
 }
 
+.brands {
+
+  margin-top: rem-calc(30) !important;
+}
+
+
+.tabs-content {
+  margin-top: rem-calc(10);  
+}
+
+.tabs-content li {
+  list-style: none;
+  float: left;
+
+}
+
+.tabs dd {
+  width: 20%;
+  text-align: center;
+  border-bottom: solid 1px $primary-color;
+  white-space: nowrap;
+  a{
+
+    transition: 0.2s ease-in-out all;
+  }
+  
+
+}
+
+.tabs .active{
+border: solid 1px $primary-color;
+border-bottom:#fff;
+
+a{
+padding-bottom: 0.55rem !important;
+padding-top: 1.5rem !important;
+
+}
+
+
+
+  
+}
+
+
+///////////////ICONS
+
+
 
 .fi-magnifying-glass:before {
 font-family: "foundation-icons";
@@ -238,16 +286,4 @@ display: inline-block;
 font-size: 21px;
 }
 
-.tabs-content {
-  margin-top: rem-calc(10);  
-}
 
-.tabs-content li {
-  list-style: none;
-  float: left;
-}
-
-.tabs dd {
-  width: 20%;
-  text-align: center;
-}
