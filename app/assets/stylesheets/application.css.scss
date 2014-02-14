@@ -153,3 +153,13 @@ color: $primary-color !important;
 .highlight {
 color: $highlight-color;
 }
+
+.tabs-content li {
+  list-style: none;
+  float: left;
+}
+
+.tabs dd {
+  width: 20%;
+  text-align: center;
+}
