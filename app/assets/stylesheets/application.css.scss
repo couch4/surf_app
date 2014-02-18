@@ -275,15 +275,26 @@ padding-top: 1.5rem !important;
 
 
 
-.fi-magnifying-glass:before {
-font-family: "foundation-icons";
-display: inline-block;
+.fi-magnifying-glass:before, .fi-shopping-bag:before {
+  font-family: "foundation-icons";
+  display: inline-block;
 }
 
-.fi-magnifying-glass:before { content: "\f16c"; }
+.fi-magnifying-glass:before { 
+  content: "\f16c";
+}
+
+.fi-shopping-bag:before { 
+  content: "\f1b0"; 
+  margin-right: rem-calc(10);
+}
+
 
 .size-21 {
-font-size: 21px;
+  font-size: rem-calc(21);
 }
 
+.size-18 {
+  font-size: rem-calc(18);
+}
 

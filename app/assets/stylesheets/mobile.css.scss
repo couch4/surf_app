@@ -1,0 +1,33 @@
+@import "foundation_and_overrides";
+
+@media (max-width:480px) {
+
+  .head {
+    position: absolute;
+    z-index: 10;
+  }
+
+  article.navIcons {
+    padding: rem-calc(6);
+  }
+
+  .row .search-bar {
+    input, .button {
+      display: none; 
+    }
+  }
+
+  .fi-magnifying-glass {
+
+  }
+
+  .logo {
+    padding: rem-calc(5) !important;
+  }
+
+  .text-right {
+    width: rem-calc(20);
+    float: right;
+  }
+
+}
