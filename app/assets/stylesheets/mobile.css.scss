@@ -30,4 +30,35 @@
     float: right;
   }
 
+  .menu-icon {
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  #menu-dropdown-nav {
+    overflow:hidden;
+    opacity:0;
+    width:rem-calc(1000);
+    height:0;
+    box-shadow: inset 0 0 rem-calc(10) rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.0302);
+  }
+
+  #menu-primary, #menu-secondary {
+    float:left;
+    margin:rem-calc(10);
+  }
+
+  #menu-primary {
+    width: 100%;
+  }
+
+  #menu-secondary {
+    margin-left:100%;
+  }
+
+  dl dd {
+    border-bottom: dashed rem-calc(1) rgba(0,0,0,0.1);
+    height: rem-calc(30);
+  }
 }
