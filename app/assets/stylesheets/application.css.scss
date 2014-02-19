@@ -275,7 +275,7 @@ padding-top: 1.5rem !important;
 
 
 
-.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before {
+.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before {
   font-family: "foundation-icons";
   display: inline-block;
 }
@@ -295,11 +295,22 @@ padding-top: 1.5rem !important;
   top: rem-calc(-7);
 }
 
+.fi-play:before {
+  content: "\f198";
+  position: absolute;
+  left: rem-calc(300);
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .size-21 {
   font-size: rem-calc(21);
 }
 
 .size-18 {
   font-size: rem-calc(18);
+}
+
+.size-12 {
+  font-size: rem-calc(12);
 }
 
