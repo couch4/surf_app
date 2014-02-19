@@ -36,6 +36,7 @@
   }
 
   #menu-dropdown-nav {
+    display: block;
     overflow: hidden;
     opacity: 0;
     width: rem-calc(1000);
@@ -71,6 +72,8 @@
   }
 
   dl dd {
+    display: block;
+    width: 100%;
     border-bottom: dashed rem-calc(1) rgba(0,0,0,0.1);
     height: rem-calc(30);
   }
@@ -81,5 +84,13 @@
       $spacing: 1em
     );
     padding-top: rem-calc(5);
+  }
+
+  .mobileFooter {
+    margin: 0;
+    background: $primary-color;
+    width: 100%;
+    height: rem-calc(80);
+    top: rem-calc(-7);
   }
 }
