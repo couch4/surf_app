@@ -275,7 +275,7 @@ padding-top: 1.5rem !important;
 
 
 
-.fi-magnifying-glass:before, .fi-shopping-bag:before {
+.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before {
   font-family: "foundation-icons";
   display: inline-block;
 }
@@ -289,6 +289,11 @@ padding-top: 1.5rem !important;
   margin-right: rem-calc(10);
 }
 
+.fi-arrow-left:before {
+  content: "\f10a";
+  position: absolute;
+  top: rem-calc(-7);
+}
 
 .size-21 {
   font-size: rem-calc(21);

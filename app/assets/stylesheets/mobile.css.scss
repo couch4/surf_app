@@ -17,7 +17,7 @@
     }
   }
 
-  .fi-magnifying-glass {
+  .fi-arrow-left {
 
   }
 
@@ -36,17 +36,18 @@
   }
 
   #menu-dropdown-nav {
-    overflow:hidden;
-    opacity:0;
-    width:rem-calc(1000);
-    height:0;
+    overflow: hidden;
+    opacity: 0;
+    width: rem-calc(1000);
+    height: 0;
     box-shadow: inset 0 0 rem-calc(10) rgba(0,0,0,0.5);
     background: rgba(0,0,0,0.0302);
   }
 
   #menu-primary, #menu-secondary {
-    float:left;
-    margin:rem-calc(10);
+    float: left;
+    margin: rem-calc(10);
+    font-weight: bold;
   }
 
   #menu-primary {
@@ -54,7 +55,18 @@
   }
 
   #menu-secondary {
-    margin-left:100%;
+    width: 30%;
+  }
+
+  .button-primary-nav {
+    position: relative;
+  }
+
+  .button-back {
+    position: absolute;
+    left: rem-calc(27);
+    top: rem-calc(1);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   }
 
   dl dd {

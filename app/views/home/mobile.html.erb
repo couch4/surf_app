@@ -5,8 +5,8 @@
 </nav>
 <div id="menu-dropdown-nav">
 <dl id="menu-primary">
-  <dd><a  class="button-secondary-nav">MENS</a></dd>
-  <dd><a  class="button-secondary-nav">WOMENS</a></dd>
+  <dd><a class="button-secondary-nav">MENS</a></dd>
+  <dd><a class="button-secondary-nav">WOMENS</a></dd>
   <dd><a class="button-secondary-nav">BOYS</a></dd>
   <dd><a class="button-secondary-nav">GIRLS</a></dd>
   <dd><a class="button-secondary-nav">INFANTS</a></dd>
@@ -19,13 +19,14 @@
 </dl>
 
 <dl id="menu-secondary">
-  <dd><a >NEW IN</a></dd>
-  <dd><a >SALE</a></dd>
-  <dd><a >SEASONAL</a></dd>
-  <dd><a >FEATURED</a></dd>
-  <dd><a >FOOTWEAR</a></dd>
-  <dd><a >CLOTHING &amp; ACCESSORIES</a></dd>
-  <dd><a >EQUIPMENT</a></dd>
+  <dd><a>NEW IN</a></dd>
+  <dd><a>SALE</a></dd>
+  <dd><a>SEASONAL</a></dd>
+  <dd><a>FEATURED</a></dd>
+  <dd><a>FOOTWEAR</a></dd>
+  <dd><a>CLOTHING &amp; ACCESSORIES</a></dd>
+  <dd><a>EQUIPMENT</a></dd>
+  <dd><a class="button-primary-nav"><span class="fi-arrow-left size-21"></span><span class='button-back'>BACK</span></a></dd>
 </dl>
 </div>
 
@@ -57,63 +58,61 @@
 <script>
 
 $(document).foundation({
-orbit: {
-  animation: 'slide',
-  timer_speed: 3000,
-  pause_on_hover: true,
-  animation_speed: 700,
-  navigation_arrows: true,
-  bullets: true,
-  slide_number: false,
-  timer: false
-}
+  orbit: {
+    animation: 'slide',
+    timer_speed: 3000,
+    pause_on_hover: true,
+    animation_speed: 700,
+    navigation_arrows: true,
+    bullets: true,
+    slide_number: false,
+    timer: false
+  }
 });
 
 var mn = $("#menu-dropdown-nav");
 
 $("#button-dropdown").click(function(){
 
-  
+var newHeight = mn.find('#menu-primary').height()+10;
 
-  var newHeight = mn.find('#menu-primary').height()+10;
-
-  if(mn.hasClass("active")){
-mn.animate({opacity:0},100,function(){
-mn.animate({height:0},100,function(){
-$('#menu-primary').css({"marginLeft":"10"});
-$('#menu-secondary').css({"marginLeft":"100%"});
-mn.css("opacity","0");
-
-});
-
-});
-
-
+  if (mn.hasClass("active")){
+    mn.animate({opacity:0},100,function(){
+    mn.animate({height:0},100,function(){
+    $('#menu-primary').css({"marginLeft":"10"});
+    $('#menu-secondary').css({"marginLeft":"100%"});
+    mn.css("opacity","0");
+    });
+    });
   }
-  else{
+  else {
+    mn.animate({height:newHeight},200,function(){
+    mn.animate({opacity:1},400);
+    });
+  }
+  mn.toggleClass("active");
+});
 
-mn.animate({height:newHeight},200,function(){
-mn.animate({opacity:1},400);
+$(".button-secondary-nav").click(function(){
+
+  $('#menu-primary').animate({marginLeft:'-100%'}, 100);
+   
+  var newHeight = $('#menu-secondary').height();
+
+  $('#menu-secondary').animate({marginLeft:10},300);
+  mn.animate({height:newHeight},300);
 
 });
 
-}
-mn.toggleClass("active");
-});
 
- $(".button-secondary-nav").click(function(){
+$(".button-primary-nav").click(function(){
 
-  
+  $('#menu-secondary').animate({marginLeft:'100%'}, 100);
+   
+  var newHeight = $('#menu-primary').height();
 
-$('#menu-primary').animate({marginLeft:'-100%'}, 100);
-    // Animation complete.
- 
-
-
-var newHeight = $('#menu-secondary').height();
-
-$('#menu-secondary').animate({marginLeft:10},300);
-mn.animate({height:newHeight},300);
+  $('#menu-primary').animate({marginLeft:'10'},300);
+  mn.animate({height:newHeight},300);
 
 });
 
