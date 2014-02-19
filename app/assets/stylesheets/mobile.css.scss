@@ -74,4 +74,12 @@
     border-bottom: dashed rem-calc(1) rgba(0,0,0,0.1);
     height: rem-calc(30);
   }
+
+  .mobileBlock {
+    @include block-grid(
+      $per-row: 2,
+      $spacing: 1em
+    );
+    padding-top: rem-calc(5);
+  }
 }
