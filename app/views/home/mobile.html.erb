@@ -3,32 +3,32 @@
     <a class="menu-icon" id="button-dropdown"><span></span></a>
   </section>
 </nav>
-<div id="menu-dropdown-nav">
-<dl id="menu-primary">
-  <dd><a class="button-secondary-nav">MENS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">WOMENS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">BOYS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">GIRLS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">INFANTS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">SNOW</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">SURF</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">SKATE</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">OUTDOORS</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">BY BRAND</a><span class="fi-play"></span></dd>
-  <dd><a class="button-secondary-nav">SALE</a><span class="fi-play"></span></dd>
-</dl>
+<section id="menu-dropdown-nav">
+  <dl id="menu-primary">
+    <dd><a class="button-secondary-nav">MENS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">WOMENS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">BOYS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">GIRLS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">INFANTS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">SNOW</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">SURF</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">SKATE</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">OUTDOORS</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">BY BRAND</a><span class="fi-play"></span></dd>
+    <dd><a class="button-secondary-nav">SALE</a><span class="fi-play"></span></dd>
+  </dl>
 
-<dl id="menu-secondary">
-  <dd><a>NEW IN</a></dd>
-  <dd><a>SALE</a></dd>
-  <dd><a>SEASONAL</a></dd>
-  <dd><a>FEATURED</a></dd>
-  <dd><a>FOOTWEAR</a></dd>
-  <dd><a>CLOTHING &amp; ACCESSORIES</a></dd>
-  <dd><a>EQUIPMENT</a></dd>
-  <dd><a class="button-primary-nav"><span class="fi-arrow-left size-21"></span><span class='button-back'>BACK</span></a></dd>
-</dl>
-</div>
+  <dl id="menu-secondary">
+    <dd><a>NEW IN</a></dd>
+    <dd><a>SALE</a></dd>
+    <dd><a>SEASONAL</a></dd>
+    <dd><a>FEATURED</a></dd>
+    <dd><a>FOOTWEAR</a></dd>
+    <dd><a>CLOTHING &amp; ACCESSORIES</a></dd>
+    <dd><a>EQUIPMENT</a></dd>
+    <dd><a class="button-primary-nav"><span class="fi-arrow-left size-21"></span><span class='button-back'>BACK</span></a></dd>
+  </dl>
+</section>
 
 <section class='main-section'>
   <div class="row">
@@ -55,7 +55,7 @@
   </div>
 
   <aside class="row">
-    <ul class="mobileBlock">
+    <ul class="mobile-new-in">
       <li><%= image_tag("Tile1.jpg", :alt => "tile 1") %></li>
       <li><%= image_tag("Tile2.jpg", :alt => "tile 2") %></li>
       <li><%= image_tag("Tile4.jpg", :alt => "tile 3") %></li>
@@ -64,11 +64,60 @@
   </aside>
 
   <footer class="row">
-    <section class="mobileFooter small-12 small-centered column">
+    <section class="mobile-footer small-12 columns">
+      <aside class="row">
+        <ul class="nav-social">
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 1") %></li>
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 2") %></li>
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 3") %></li>
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 4") %></li>
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 5") %></li>
+          <li><%= image_tag("socialFacebook.svg", :alt => "social 6") %></li>
+        </ul>
+      </aside>
+      <article class="row">
+        <aside class="small-6 column">
+          <a href="#" class="custom-button">My Account</a>
+        </aside>
+        <aside class="small-6 column">
+          <a href="#" class="custom-button">Not You?</a>
+        </aside>
+      </article>
+      <form>
+        <article class="custom-form small-12 column">
+          <div class="row">
+            <aside class="small-12 small-centered column">
+              <label><span class="bold">sign up </span>for surfdome special offers</label>
+              <input type="text" placeholder="Enter Email Address"/>
+            </aside>
+          </div>
+        </article>
+      </form>
+      <article class="row">
+        <aside class="small-12 column">
+          <a href="#" class="custom-button button-more">more +</a>
+        </aside>
+      </article>
+
+      <article class="row">
+        <aside class="small-12 column hide">
+          <a href="#" class="custom-button button-less">less –</a>
+        </aside>
+      </article>
+
+      <article class="row">
+        <aside class="small-12 column">
+          <dl id="menu-primary">
+            <dd><a href="#">track order</a><span class="fi-play"></dd>
+            <dd><a href="#">delivery</a><span class="fi-play"></dd>
+            <dd><a href="#">returns</a><span class="fi-play"></dd>
+            <dd><a href="#">contact us</a><span class="fi-play"></dd>
+          </dl> 
+        </aside>
+      </article>
 
     </section>
   </footer>
-
 </section>
 
 <script>
@@ -129,6 +178,13 @@ $(".button-primary-nav").click(function(){
 
   $('#menu-primary').animate({marginLeft:'10'},300);
   mn.animate({height:newHeight},300);
+
+});
+
+
+$(".button-more").click(function(){
+
+  $('#menu-primary').animate({marginBottom:'100%'}, 100);
 
 });
 

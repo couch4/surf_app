@@ -1,13 +1,13 @@
 @import "foundation_and_overrides";
 
-@media (max-width:480px) {
+@media (max-width:640px) {
 
   .head {
     position: absolute;
     z-index: 10;
   }
 
-  article.navIcons {
+  .nav-icons {
     padding: rem-calc(6);
   }
 
@@ -15,10 +15,6 @@
     input, .button {
       display: none; 
     }
-  }
-
-  .fi-arrow-left {
-
   }
 
   .logo {
@@ -78,7 +74,7 @@
     height: rem-calc(30);
   }
 
-  .mobileBlock {
+  .mobile-new-in {
     @include block-grid(
       $per-row: 2,
       $spacing: 1em
@@ -86,11 +82,43 @@
     padding-top: rem-calc(5);
   }
 
-  .mobileFooter {
+  .mobile-footer {
     margin: 0;
-    background: $primary-color;
+    background: $secondary-color;
     width: 100%;
-    height: rem-calc(80);
+    height: 100%;
     top: rem-calc(-7);
   }
+
+  .nav-social {
+    @include block-grid(
+      $per-row: 6,
+      $spacing: 1em
+    );
+    padding: rem-calc(25) rem-calc(35) rem-calc(12) rem-calc(30);
+  }
+
+  .custom-button {
+    @include button(
+      $padding: rem-calc(9),
+      $bg: $primary-color,
+      $full-width: true
+    );
+  }
+
+  .custom-form {
+    padding: 0;
+  }
+
+  label {
+    padding-bottom: rem-calc(5);
+    font-variant: small-caps;
+    font-size: 0.9em;
+    text-align: center; 
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
 }
