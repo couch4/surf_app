@@ -32,7 +32,7 @@
 // $include-xl-html-grid-classes: false;
 
 $row-width: rem-calc(970);
- $column-gutter: rem-calc(10);
+ $column-gutter: rem-calc(30);
 
 
 // $total-columns: 12;
@@ -40,8 +40,7 @@ $row-width: rem-calc(970);
 // We use these to control various global styles
 
 @include fontFace('ArialMTLight','/assets/fonts/ArialMT/ArialMT-Light');
-@include fontFace('ArialMT','
-  /assets/fonts/ArialMT/ArialMT-Medium');
+@include fontFace('ArialMT','/assets/fonts/ArialMT/ArialMT-Medium');
 @include fontFace('ArialMTBlack','/assets/fonts/ArialMT/ArialMT-Black');
 @include fontFace('foundation-icons','/assets/fonts/icons/foundation-icons');
 
@@ -138,7 +137,7 @@ $secondary-color: #e8e8e8;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
- $h1-font-size: rem-calc(24);
+ $h1-font-size: rem-calc(26);
  $h2-font-size: rem-calc(22);
  $h3-font-size: rem-calc(18);
  $h4-font-size: rem-calc(16);
@@ -155,7 +154,8 @@ font-family: "ArialMTLight";
  }
 
  h1,h2,h3 {
-font-family: "ArialMTBlack";
+font-family: "ArialMTBlack" !important;
+letter-spacing:0;
 
  }
 
@@ -196,6 +196,11 @@ $paragraph-font-size: rem-calc(12);
 // $hr-border-style: solid;
  $hr-border-color: $primary-color;
  $hr-margin: rem-calc(20);
+
+ hr{
+margin-top: rem-calc(10) !important;
+
+ }
 
 
 // We use these to style lists
@@ -661,7 +666,11 @@ $input-border-radius: none;
 
 // Off-canvas
 
-$tabbar-bg: #FFF;
+
+
+
+$tabbar-bg: $primary-color;
+
 // $tabbar-height: rem-calc(45);
 // $tabbar-line-height: $tabbar-height;
 $tabbar-color: #000;
@@ -1153,7 +1162,7 @@ $tabs-navigation-font-size: rem-calc(12);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
- $topbar-bg-color: #000;
+ $topbar-bg-color: $primary-color;
 // $topbar-bg: $topbar-bg-color;
 $topbar-color: #fff;
 

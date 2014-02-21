@@ -2,7 +2,66 @@
         <!-- <div class="small-5 column"> -->
           <div class="sub-nav menu-1">
   <ul>
-      <li><a href="#">MENS</a></li>
+      <li><a href="/product"  data-options="is_hover:true">MENS</a>
+<div id="menu-mens" data-dropdown-content="" class="large f-dropdown content row right" style="position: absolute; top: 45px; left: -99999px;">
+                  <div class="large-6 columns">
+                    <!-- Heading 1 -->  
+                    <div class="row">
+                      <div class="large-12 columns">
+                        <ul>
+                          <li><label>Heading 1</label></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="large-6 columns">
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                          <li><a href="#">Link 4</a></li>
+                        </ul>   
+                      </div>
+                      <div class="large-6 columns">
+                        <ul>
+                          <li><a href="#">Link 5</a></li>
+                          <li><a href="#">Link 6</a></li>
+                          <li><a href="#">Link 7</a></li>
+                          <li><a href="#">Link 8</a></li>
+                        </ul>
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="large-6 columns">
+                    <!-- Heading 2 -->
+                    <div class="row">
+                      <div class="large-12 columns">
+                        <ul>
+                          <li><label>Heading 2</label></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="large-6 columns">
+                        <ul>
+                          <li><a href="#">Link 1</a></li>
+                          <li><a href="#">Link 2</a></li>
+                          <li><a href="#">Link 3</a></li>
+                          <li><a href="#">Link 4</a></li>
+                        </ul>
+                      </div>
+                      <div class="large-6 columns">
+                        <ul>
+                          <li><a href="#">Link 5</a></li>
+                          <li><a href="#">Link 6</a></li>
+                          <li><a href="#">Link 7</a></li>
+                          <li><a href="#">Link 8</a></li>
+                        </ul> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </li>
       <li><a href="#">WOMENS</a></li>
       <li><a href="#">BOYS</a></li>
       <li><a href="#">GIRLS</a></li>
@@ -40,19 +99,41 @@
     <li>
       <%= image_tag("slider1.jpg", :alt => "slider 1") %>
         <div class="orbit-caption">
-        Caption One.
+        <div class="sub-nav">
+  <ul>
+      <li><a href="#">MENS SHOES</a></li>
+      <li><a href="#">WOMENS SHOES</a></li>
+      <li><a href="#">SHOES ON SALE</a></li>
+      
+  </ul>
+</div>
       </div>
     </li>
     <li>
       <%= image_tag("slider2.jpg", :alt => "slider 2") %>
       <div class="orbit-caption">
-        Caption Two.
+        <div class="sub-nav">
+        <ul>
+        <li><a href="#">SKATE TEES</a></li>
+      <li><a href="#">SKATE JEANS</a></li>
+      <li><a href="#">SKATE SHOES</a></li>
+      <li><a href="#">SKATEBOARDS</a></li>
+      
+  </ul>
+</div>
       </div>
     </li>
     <li>
       <%= image_tag("slider3.jpg", :alt => "slider 3") %>
       <div class="orbit-caption">
-        Caption Three.
+        <div class="sub-nav">
+        <ul>
+      <li><a href="#">SNOW JACKETS</a></li>
+      <li><a href="#">SNOWBOARDS</a></li>
+      <li><a href="#">SNOWBOARD ACCESSORIES</a></li>
+      
+  </ul>
+</div>
       </div>
     </li>
   </ul>
@@ -80,6 +161,24 @@ festivals, following fashion or exploring the world, we make online shopping eas
 <div class="small-6 medium-3 column"><h2>Footwear</h2><div class="overlay"></div><%= image_tag("Tile5.jpg", :alt => "tile 6") %></div>
 </div>
 
+<div class="row product-items">
+  <div class="small-12 column"><hr></div>
+  <div class="small-12 column"><div class="new-arrivals-logo"><%= image_tag("logoNewArrivals.svg", :alt => "New Arrivals") %></div>
+    <ul class='large-block-grid-5 medium-block-grid-3 '>
+        <li><div class="item-img"><%=image_tag 'newItemsBoots.jpg'%></div>
+          <div class="item-description"><h5>Wolf &amp; York</h5><p>Splishsplash Wellington Boots</p><span class="price highlight">£24.99</span></div></li>
+        <li><div class="item-img"><%=image_tag 'newItemsHoodies.jpg'%></div><div class="item-description"><h5>Adidas</h5><p>Originals Adi Trefoil Hoody</p><span class="price highlight">£24.99</span></div></li>
+        <li><div class="item-img"><%=image_tag 'newItemsJacket.jpg'%></div><div class="item-description"><h5>Etnies</h5><p>Brick Lane Shirt</p><span class="price highlight">£24.99</span></div></li>
+        <li><div class="item-img"><%=image_tag "newItemsShoes.jpg"%></div><div class="item-description"><h5>Vans</h5><p>Old Skool Shoes</p><span class="price highlight">£24.99</span></div></li>
+        <li><div class="item-img"><%=image_tag 'newItemsSlippers.jpg'%></div><div class="item-description"><h5>Wolf &amp; York</h5><p>Sweetsop Slippers</p><span class="price highlight">£24.99</span></div></li>
+        <li><div class="item-img"><%=image_tag 'newItemsJacket.jpg'%></div><div class="item-description"><h5>Etnies</h5><p>Brick Lane Shirt</p><span class="price highlight">£24.99</span></div></li>
+      </ul>
+      </div>
+      <div class="small-12 column"><hr></div>
+    </div>
+
+
+
 <div class="row product-tiles">
 <div class="small-12 medium-6 column"><h2>Loungewear</h2><div class="overlay"></div><%= image_tag("TileWide3.jpg", :alt => "tile 7") %></div>
 <div class="small-6 medium-3 column"><h2>Hoodies</h2><div class="overlay"></div><%= image_tag("Tile6.jpg", :alt => "tile 8") %></div>
@@ -87,14 +186,17 @@ festivals, following fashion or exploring the world, we make online shopping eas
 </div>
 
 
-<section class='row brands'>
-  <dl class="tabs" data-tab>
-    <dd class="active"><a href="#panel2-1">ACTION SPORTS</a></dd>
+
+<aside class='row brands'>
+  <div class="our-brands-logo"><%= image_tag("logoOurBrands.svg", :alt => "Our Brands") %></div>
+ <dl class="tabs" data-tab>
+    <dd class="active"><a href="#panel2-1">ACTION&nbsp;SPORTS</a></dd>
     <dd><a href="#panel2-2">OUTDOOR</a></dd>
     <dd><a href="#panel2-3">LIFESTYLE</a></dd>
     <dd><a href="#panel2-4">FASHION</a></dd>
     <dd><a href="#panel2-5">STREETWEAR</a></dd>
   </dl>
+
   <article class="tabs-content">
     <aside class="content active" id="panel2-1">
       <ul class='large-block-grid-5'>
@@ -139,23 +241,27 @@ festivals, following fashion or exploring the world, we make online shopping eas
         <li><%=image_tag 'brandsConverse.jpg'%></li>
         <li><%=image_tag 'brandsAdidas.jpg'%></li>
         <li><%=image_tag "brandsElement.jpg"%></li>
+
       </ul>
     </aside>
   </article>
-</section>
+</aside>
 
   <script>
   $(document).foundation({
+
+
     orbit: {
       animation: 'slide',
-      timer_speed: 3000,
+      timer_speed: 4000,
       pause_on_hover: true,
-      animation_speed: 700,
+      resume_on_mouseout: true,
+      animation_speed: 0.8,
       navigation_arrows: true,
       bullets: true,
       slide_number: false,
-      timer: false
+      timer: true
     }
-  });
 
+  });
   </script>
