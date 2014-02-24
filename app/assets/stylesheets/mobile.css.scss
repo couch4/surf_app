@@ -9,7 +9,6 @@
 
   .nav-icons {
     padding: rem-calc(6);
-    // right: rem-calc(-20);
   }
 
   .row .search-bar {
@@ -52,6 +51,7 @@
     float: left;
     margin: rem-calc(10);
     font-weight: bold;
+    padding-top: rem-calc(6);
   }
 
   #menu-primary {
@@ -99,9 +99,9 @@
       $spacing: 1em
     );
     padding-top: rem-calc(5);
-      li {
-        text-align: center;
-      }
+    li:nth-of-type(2n+1) {
+      text-align: right;
+    }
   }
 
   .mobile-footer {
