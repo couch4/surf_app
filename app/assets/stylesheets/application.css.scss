@@ -17,10 +17,15 @@
 @import "foundation_and_overrides";
 
 $highlight-color: #1ab8d2;
+$available-color: #048f43;
+$body-copy: rem-calc(11);
 
 body,html {
   height:100%;
   width:100%;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
 
   
 // background-image: linear-gradient(#1ab8d2 480px, white 480px) !important;
@@ -55,6 +60,10 @@ input[type=text]{
 
 .button{
 height:rem-calc(32);
+background: $highlight-color !important;
+border: darken($highlight-color,10%) 1px solid  !important;
+color: lighten($highlight-color,60%) !important;
+padding-top: 0.6rem;
 
 }
 
@@ -196,6 +205,7 @@ color: $primary-color !important;
 
 
 
+
 .product-tiles {
 
 padding:0 rem-calc(10);
@@ -272,6 +282,7 @@ text-align:center;
 position:relative;
 margin-bottom:rem-calc(5);
 padding: rem-calc(10) 0;
+padding:0;
   
   &:after{
     content: "";
@@ -287,6 +298,8 @@ position:absolute;
 }
 
   }
+
+ 
 
  img {
    -webkit-filter: grayscale(1);
@@ -358,7 +371,7 @@ p {
 }
 
 @media (min-width:1025px){
- .product-items li:last-child {
+ .product-items.new-arrivals li:last-child {
 
   display:none;
  }
@@ -473,6 +486,10 @@ height: rem-calc(30);
 color: $highlight-color !important;
 }
 
+.available{
+color: $available-color !important;
+}
+
 @media (max-width:900px){
   h2{
 font-size: 14px !important;
@@ -480,6 +497,8 @@ font-size: 14px !important;
   }
 
 }
+
+
 
 /////////   ORBIT SLIDER
 
@@ -705,6 +724,23 @@ p,a,span{
 
 margin:0 !important;
 
+.item-img-main{
+margin-bottom:rem-calc(20);
+position:relative;
+
+&:after{
+ content: "";
+position: absolute;
+z-index: 10;
+background: rgba(0, 0, 0, 0.04);
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+}
+
+}
+
 
 ul > li{
 
@@ -721,6 +757,8 @@ img{
 .item-img {
   padding:0;
 }
+
+
 
 .item-description {
 
@@ -812,6 +850,8 @@ opacity:1;
 }
 
 }
+
+
 
 
 
@@ -914,17 +954,104 @@ a{
   
 
 
+.product-description{
+
+small{
+display:block;
+vertical-align:top;
+line-height:1.2;
+
+}
+
+.item-selections{
+
+
+
+  >div{
+padding: rem-calc(10) rem-calc(2) 0;
+
+
+ &:first-child{
+    padding-left: rem-calc(15);
+  }
+
+  &:last-child {
+    padding-right: rem-calc(15);
+  }
+
+  }
+
+  input[type=textbox] {
+width:rem-calc(30) !important;
+display:inline-block;
+margin: 0 rem-calc(5);
+    }
+span {
+  font-size: $body-copy;
+}
+
+}
+
+h4,h5,h6{
+letter-spacing:0;
+}
+
+.available {
+  font-weight: bold;
+}
+
+.highlight{
+  border-top:1px solid $primary-color;
+  border-bottom:1px solid $primary-color;
+  padding: rem-calc(5) 0;
+  margin: rem-calc(10) 0;
+}
+
+.product-features{
+
+  font-weight:bold;
+  margin-top:rem-calc(10);
+
+}
+
+
+}
+
+.product-thumb{
+
+
+
+li:hover {
+  .item-img:after{
+   background:none !important;
+   box-shadow: inset 0 0 1px rgba(0,0,0,0.4);
+  }
+}
+
+p{
+  margin:0;
+}
+
+strong {
+  line-height:1.2;
+  display:block;
+}
+
+}
+
 /////////////////////////
 
-.nav-left {
-  padding-right:rem-calc(5);
-
-  .crumbs {
+ .crumbs {
 font-size: 11px;
 font-style: italic;
 margin: 20px 0 30px;
 
   }
+
+.nav-left {
+  padding-right:rem-calc(5);
+
+ 
 
   .fhead {
     font-size: 12px;
@@ -963,7 +1090,7 @@ margin:0;
 
 
 
-.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before {
+.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before,.fi-check:before  {
   font-family: "foundation-icons";
   display: inline-block;
 }
@@ -1015,6 +1142,10 @@ margin:0;
   content: "\f1cd";
 }
 
+.fi-check:before { 
+  content: "\f126";
+}
+
 .size-21 {
   font-size: rem-calc(21);
 }
@@ -1023,6 +1154,12 @@ margin:0;
   font-size: rem-calc(18);
 }
 
+.size-16 {
+  font-size: rem-calc(16);
+}
+.size-14 {
+  font-size: rem-calc(14);
+}
 .size-12 {
   font-size: rem-calc(12);
 }
