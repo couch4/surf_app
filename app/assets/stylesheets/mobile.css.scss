@@ -21,7 +21,7 @@
     padding: rem-calc(5) !important;
     height: rem-calc(63);
 
-    img{
+    img {
       height:rem-calc(32);
     }
   }
@@ -65,7 +65,6 @@
     dd a {
       width: 100%;
     }
-  
   }
 
   .button-primary-nav, .button-secondary-nav {
@@ -117,7 +116,10 @@
       $per-row: 6,
       $spacing: 1em
     );
-    padding: rem-calc(25) rem-calc(35) rem-calc(12) rem-calc(30);
+    padding: rem-calc(25) rem-calc(20) rem-calc(0) rem-calc(20);
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
   }
 
   .custom-button {
@@ -143,12 +145,12 @@
     font-weight: bold;
   }
 
-  .search-bar{
-margin-right:0;
+  .search-bar {
+    margin-right:0;
 
-   .small-9{
+   .small-9 {
     // width:85%;
-  }
+    }
   }
 
 }

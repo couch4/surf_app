@@ -21,6 +21,9 @@ $highlight-color: #ef802e;
 body,html {
   height:100%;
   width:100%;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
 }
 
 .off-canvas-wrap,.inner-wrap {
@@ -304,7 +307,6 @@ padding-top: 1.5rem !important;
 
 .fi-social-facebook:before {
   content: "\f1c4";
-  color: #FFF;
 }
 
 .fi-social-twitter:before {
