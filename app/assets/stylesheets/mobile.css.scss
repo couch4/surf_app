@@ -130,6 +130,16 @@
     );
   }
 
+  .custom-button-light {
+    @include button(
+      $padding: rem-calc(9),
+      $bg: $secondary-color,
+      $full-width: true
+    );
+    $button-font-color: #f39;
+    text-decoration: underline;
+  }
+
   .custom-form {
     padding: 0;
   }
