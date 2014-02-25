@@ -15,6 +15,7 @@
  */
 
 @import "foundation_and_overrides";
+// @import "nav";
 
 $highlight-color: #1ab8d2;
 $available-color: #048f43;
@@ -48,24 +49,17 @@ body,html {
 
 
 
-input[type=text]{
-  margin:0;
-  padding:0 10px;
-  color:$primary-color !important;
-  font-size: rem-calc(9);
-  color: $primary-color !important;
-  letter-spacing: 0.1rem;
-  height:rem-calc(30);
-}
+// input[type=text]{
+//   margin:0;
+//   padding:0 10px;
+//   color:$primary-color !important;
+//   font-size: rem-calc(9);
+//   color: $primary-color !important;
+//   letter-spacing: 0.1rem;
+//   height:rem-calc(30);
+// }
 
-.button{
-height:rem-calc(32);
-background: $highlight-color !important;
-border: darken($highlight-color,10%) 1px solid  !important;
-color: lighten($highlight-color,60%) !important;
-padding-top: 0.6rem;
 
-}
 
 .left{
 position:relative;
@@ -80,117 +74,40 @@ top:6px;
   
 }
 
+input[type=text],input[type=textbox],select{
+  margin:0;
+  padding:0 10px;
+  color:$primary-color !important;
+  font-size: rem-calc(9) !important;
+  color: $primary-color !important;
+  letter-spacing: 0.1rem;
+  height:rem-calc(30) !important;
+  text-transform: uppercase;
+  border: black solid 1px !important;
+}
 
+.button{
+height:rem-calc(30);
+background: $highlight-color !important;
+border: darken($highlight-color,10%) 1px solid  !important;
+color: lighten($highlight-color,60%) !important;
+padding-top: 0.55rem !important;
+font-size:rem-calc(10) !important;
+transition: 0.2s all;
+
+&:hover{
+background: lighten($highlight-color,10%) !important;
+
+}
+
+
+}
 
 .head p {
  margin-bottom:2px;  
 }
 
-.main-nav {
- padding:0 $column-gutter/2;   
-}
 
-.sub-nav {
-  border-top: 1px $primary-color solid; 
-  margin: 0 !important;
-  padding: 0 !important;  
-
-}
-
-.main-nav .sub-nav > ul {
-  margin:0; 
-  text-align: justify; 
-  height:2rem;  
-}
-
-.sub-nav > ul:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-
-.sub-nav > ul > li {
-  margin-bottom:0;
-  display:inline-block;
-  
-}
-
-.sub-nav li a {
-    // padding: 0.5rem 1.097rem !important;
-    // padding: 0.5rem $row-width/56.4 !important;
-    text-align: center;
-    // padding: 0.5rem 0 !important;
-    display:block;
-transition: 0.2s ease-in-out all;
-width:100%;
-}
-
-.sub-nav li a:hover {  
-  background: $secondary-color;
-  color: $primary-color !important;   
-}
-
-.sub-nav li:before {
-  position: absolute;
-  margin-left:-2px !important;
-  padding: 0.5rem 0 !important;
-}
-
-.main-nav .column{
-padding:0;
-}
-
-.main-nav .sub-nav {
-  border-right:1px solid $primary-color; 
-  width:100%;
-  float:left;
-}
-
-.main-nav .menu-1 {
-width:45%;
-display:inline-block;
-margin:0;
-padding:0;
-}
-
-.main-nav .menu-2 {
-width:35%;
-display:inline-block;
-margin:0;
-padding:0;
-}
-
-.main-nav .menu-3 {
-width:20%;
-display:inline-block;
-margin:0;
-padding:0;
-}
-
-
-.main-nav{
-
-  .menu-1 li a{
-padding: 0.5rem 1.07rem !important;
-
-}
-
-.menu-2 li a{
-padding: 0.5rem 0.925rem !important;
-}
-
-.menu-3 li a{
-padding: 0.5rem 1.26rem !important;
-}
-
-.menu-3 {
-  border-right:none; 
-
-  li a{
-padding: 0.5rem 1.22rem !important;
-}
-}
-}
 
 
 
@@ -392,7 +309,7 @@ p {
 
 
 .tabs-content {
-  margin-top: rem-calc(10);  
+  margin: rem-calc(10) 0 0;  
 }
 
 .tabs-content li {
@@ -436,6 +353,7 @@ footer {
   background: $primary-color;
   padding: rem-calc(30) 0;
   color:#fff !important;
+  margin-top:rem-calc(50) !important;
 
 p,a{
   color:#fff !important;
@@ -982,12 +900,15 @@ padding: rem-calc(10) rem-calc(2) 0;
   }
 
   input[type=textbox] {
-width:rem-calc(30) !important;
+width:40% !important;
 display:inline-block;
-margin: 0 rem-calc(5);
+margin: 0;
+float:right;
     }
 span {
   font-size: $body-copy;
+  top: 1.2rem;
+position: absolute;
 }
 
 }
@@ -1029,7 +950,7 @@ li:hover {
 }
 
 p{
-  margin:0;
+  margin:0 0 rem-calc(5);
 }
 
 strong {
@@ -1037,6 +958,11 @@ strong {
   display:block;
 }
 
+}
+
+[class*="block-grid-"] > li{
+
+  padding-bottom:0 !important;
 }
 
 /////////////////////////
