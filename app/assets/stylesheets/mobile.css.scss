@@ -62,7 +62,7 @@
     position:absolute;
     margin-left:100%;
     width:100%;
-    dd a {
+    li a {
       width: 100%;
     }
   }
@@ -78,14 +78,14 @@
     font-size: 0.9em;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 
-    dd:last-child {
+    li:last-child {
       .fi-play {
         display: none;
       }
     }
   }
 
-  dl dd a {
+ ul li a {
     display: block;
     width: 100%;
     border-bottom: dashed rem-calc(1) rgba(0,0,0,0.1);

@@ -1,37 +1,5 @@
-<nav class="tab-bar">
-    <section class="right-small">
-    <a class="menu-icon" id="button-dropdown"><span></span></a>
-  </section>
-</nav>
-<section id="menu-dropdown-nav">
-  <dl id="menu-primary">
-    <dd><a class="button-secondary-nav">MENS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">WOMENS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">BOYS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">GIRLS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">INFANTS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">SNOW<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">SURF<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">SKATE<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">OUTDOORS<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">BY BRAND<span class="fi-play"></span></a></dd>
-    <dd><a class="button-secondary-nav">SALE<span class="fi-play"></span></a></dd>
-  </dl>
-
-  <dl id="menu-secondary">
-    <dd><a>NEW IN<span class="fi-play"></span></a></dd>
-    <dd><a>SALE<span class="fi-play"></span></a></dd>
-    <dd><a>SEASONAL<span class="fi-play"></span></a></dd>
-    <dd><a>FEATURED<span class="fi-play"></span></a></dd>
-    <dd><a>CLOTHING &amp; ACCESSORIES<span class="fi-play"></span></a></dd>
-    <dd><a>FOOTWEAR<span class="fi-play"></span></a></dd>
-    <dd><a>EQUIPMENT<span class="fi-play"></span></a></dd>
-    <dd><a class="button-primary-nav"><span class="fi-arrow-left size-21"></span><span class='button-back'>BACK</span></a></dd>
-  </dl>
-</section>
-
-<section class='main-section'>
-  <div class="row">
+<%= render "shared/nav" %>
+<div class="row">
     <ul class="example-orbit" data-orbit>
       <li>
         <%= image_tag("slider1.jpg", :alt => "slider 1") %>
@@ -54,18 +22,18 @@
     </ul>
   </div>
 
-  <aside class="row">
-    <ul class="mobile-new-in">
+  <div class="row">
+    <ul class="small-block-grid-2">
       <li><a><%= image_tag("Tile1.jpg", :alt => "tile 1") %></a></li>
       <li><a><%= image_tag("Tile2.jpg", :alt => "tile 2") %></a></li>
       <li><a><%= image_tag("Tile4.jpg", :alt => "tile 3") %></a></li>
       <li><a><%= image_tag("Tile5.jpg", :alt => "tile 4") %></a></li>
     </ul>
-  </aside>
+  </div>
 
-  <footer class="row">
-    <section class="mobile-footer small-12 columns">
-      <aside class="row">
+  <!-- <footer class="row">
+    <div class="mobile-footer small-12 columns">
+      <div class="row">
         <ul class="nav-social">
           <li><a class="fi-social-facebook"></a></li>
           <li><a class="fi-social-twitter"></a></li>
@@ -74,126 +42,66 @@
           <li><a class="fi-social-youtube"></a></li>
           <li><a class="fi-social-instagram"></a></li>
         </ul>
-      </aside>
-      <article class="row">
-        <aside class="small-6 column">
+      </div>
+      <div class="row">
+        <div class="small-6 column">
           <a href="#" class="custom-button">My Account</a>
-        </aside>
-        <aside class="small-6 column">
+        </div>
+        <div class="small-6 column">
           <a href="#" class="custom-button">Not You?</a>
-        </aside>
-      </article>
+        </div>
+      </div>
       <form>
-        <article class="custom-form small-12 column">
+        <div class="custom-form small-12 column">
           <div class="row">
-            <aside class="small-12 small-centered column">
+            <div class="small-12 small-centered column">
               <label><span class="bold">sign up </span>for surfdome special offers</label>
               <input type="text" placeholder="Enter Email Address"/>
-            </aside>
+            </div>
           </div>
-        </article>
+        </div>
       </form>
-      <article class="row">
-        <aside class="small-5 column">
+      <div class="row">
+        <div class="small-5 column">
           <a href="#" class="custom-button-light">track order</a>
-        </aside>
-        <aside class="small-7 column">
+        </div>
+        <div class="small-7 column">
           <a href="#" class="custom-button-light">delivery / returns</a>
-        </aside>
-      </article>
-      <article class="row">
-        <aside class="small-12 column">
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 column">
           <a href="#" class="custom-button button-more">more +</a>
-        </aside>
-      </article>
+        </div>
+      </div>
 
-      <article class="row">
-        <aside class="small-12 column hide">
+      <div class="row">
+        <div class="small-12 column hide">
           <a href="#" class="custom-button button-less">less –</a>
-        </aside>
-      </article>
+        </div>
+      </div>
 
-      <article class="row">
-        <aside class="small-12 column">
+      <div class="row">
+        <div class="small-12 column">
           <dl id="menu-primary">
             <dd><a href="#">customer care</a></dd>
             <dd><a href="#">about surfdome</a></dd>
             <dd><a href="#">why shop at surfdome?</a></dd>
             <dd><a href="#">opening times</a></dd>
           </dl> 
-        </aside>
-      </article>
+        </div>
+      </div>
 
-    </section>
-  </footer>
-</section>
-
-<script>
-
-$(document).foundation({
-  orbit: {
-    animation: 'slide',
-    timer_speed: 3000,
-    pause_on_hover: true,
-    animation_speed: 700,
-    navigation_arrows: true,
-    bullets: true,
-    slide_number: false,
-    timer: false
-  }
-});
-
-var mn = $("#menu-dropdown-nav");
-
-$("#button-dropdown").click(function(){
-
-var newHeight = mn.find('#menu-primary').height()+10;
-
-  if (mn.hasClass("active")){
-    mn.animate({opacity:0},100,function(){
-    mn.animate({height:0},100,function(){
-    $('#menu-primary').css({"marginLeft":"10"});
-    $('#menu-secondary').css({"marginLeft":"100%"});
-    mn.css("opacity","0");
-    });
-    });
-  }
-  else {
-    mn.animate({height:newHeight},200,function(){
-    mn.animate({opacity:1},400);
-    });
-  }
-  mn.toggleClass("active");
-});
-
-$(".button-secondary-nav").click(function(){
-
-  $('#menu-primary').animate({marginLeft:'-100%'}, 100);
-   
-  var newHeight = $('#menu-secondary').height();
-
-  $('#menu-secondary').animate({marginLeft:10},300);
-  mn.animate({height:newHeight},300);
-
-});
+    </div>
+  </footer> -->
 
 
-$(".button-primary-nav").click(function(){
 
-  $('#menu-secondary').animate({marginLeft:'100%'}, 100);
-   
-  var newHeight = $('#menu-primary').height();
-
-  $('#menu-primary').animate({marginLeft:'10'},300);
-  mn.animate({height:newHeight},300);
-
-});
+ <script>
 
 
-$(".button-more").click(function(){
+$('.example-orbit').foundation();
 
-  $('#menu-primary').animate({marginBottom:'100%'}, 100);
 
-});
 
 </script>

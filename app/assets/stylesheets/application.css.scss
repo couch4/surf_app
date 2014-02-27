@@ -1080,7 +1080,7 @@ right:rem-calc(18);
 
 
 
-.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before,.fi-check:before  {
+.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before,.fi-check:before,.fi-list:before  {
   font-family: "foundation-icons";
   display: inline-block;
 }
@@ -1100,11 +1100,13 @@ right:rem-calc(18);
   top: rem-calc(-7);
 }
 
+.fi-list:before {
+  content: "\f169";
+}
+
 .fi-play:before {
   content: "\f198";
-  position: absolute;
-  left: rem-calc(300);
-  color: rgba(0, 0, 0, 0.2);
+  
 }
 
 .fi-social-facebook:before {

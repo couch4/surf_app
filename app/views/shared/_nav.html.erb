@@ -154,4 +154,110 @@
         
   </div>
 
+  <div id="menu-dropdown-nav" class="show-for-medium-down row">
+    <div class="small-12 column">
+    <div class="tab-bar">
+    <a class="menu-icon right" id="button-dropdown"></a>
+  </div>
+  <ul id="menu-primary">
+    <li><a class="button-secondary-nav">MENS</a></li>
+    <li><a class="button-secondary-nav">WOMENS</a></li>
+    <li><a class="button-secondary-nav">BOYS</a></li>
+    <li><a class="button-secondary-nav">GIRLS</a></li>
+    <li><a class="button-secondary-nav">INFANTS</a></li>
+    <li><a class="button-secondary-nav">SNOW</a></li>
+    <li><a class="button-secondary-nav">SURF</a></li>
+    <li><a class="button-secondary-nav">SKATE</a></li>
+    <li><a class="button-secondary-nav">OUTDOORS</a></li>
+    <li><a class="button-secondary-nav">BY BRAND</a></li>
+    <li><a class="button-secondary-nav">SALE</a></li>
+  </ul>
+
+  <ul id="menu-secondary">
+    <li><a>NEW IN</a></li>
+    <li><a>SALE</a></li>
+    <li><a>SEASONAL</a></li>
+    <li><a>FEATURED</a></li>
+    <li><a>CLOTHING &amp; ACCESSORIES</a></li>
+    <li><a>FOOTWEAR</a></li>
+    <li><a>EQUIPMENT</a></li>
+    <li><a class="button-primary-nav">BACK</a></li>
+  </ul>
+</div>
+</div>
+
+<script>
+
+
+
+
+document.onreadystatechange = function () {
+  var state = document.readyState;
+
+  if (state == 'interactive') {
+      init();
+      }
+    };
+
+init = function(){
+
+var mn = $("#menu-dropdown-nav");
+
+$("#button-dropdown").click(function(){
+
+  var mp = mn.find('#menu-primary');
+
+ 
+var newHeight = mp.height()+10;
+
+  if (mn.hasClass("active")){
+    mp.animate({opacity:0},100,function(){
+    mp.animate({height:0},100,function(){
+    $('#menu-primary').css({"marginLeft":"10"});
+    $('#menu-secondary').css({"marginLeft":"100%"});
+    // mn.css("opacity","0");
+    });
+    });
+  }
+  else {
+    mn.animate({height:newHeight},200,function(){
+    mn.animate({opacity:1},400);
+    });
+  }
+  mn.toggleClass("active");
+});
+
+$(".button-secondary-nav").click(function(){
+
+  $('#menu-primary').animate({marginLeft:'-100%'}, 100);
+   
+  var newHeight = $('#menu-secondary').height();
+
+  $('#menu-secondary').animate({marginLeft:10},300);
+  mn.animate({height:newHeight},300);
+
+});
+
+
+$(".button-primary-nav").click(function(){
+
+  $('#menu-secondary').animate({marginLeft:'100%'}, 100);
+   
+  var newHeight = $('#menu-primary').height();
+
+  $('#menu-primary').animate({marginLeft:'10'},300);
+  mn.animate({height:newHeight},300);
+
+});
+
+
+$(".button-more").click(function(){
+
+  $('#menu-primary').animate({marginBottom:'100%'}, 100);
+
+});
+
+};
+
+</script>
  

@@ -220,3 +220,51 @@ transition: 0.2s ease-in-out all;
 .meganav.open{
    display:block;
 }
+
+
+///////////////////////////////////////////// MOBILE NAV
+
+#menu-dropdown-nav {
+
+  margin-bottom:rem-calc(5);
+
+  .tab-bar{
+    display: block;
+    overflow: hidden;
+    height: rem-calc(35);
+    // box-shadow: inset 0 0 rem-calc(10) rgba(0,0,0,0.5);
+    background: $primary-color;
+    
+    .menu-icon{
+      cursor: pointer;
+      z-index: 20;
+      position:relative;
+      &:before{
+          content:"\f169";
+      position: absolute;
+      right: rem-calc(10);
+      top: rem-calc(2);
+      font-family: "foundation-icons";
+      display: block;
+      color: darken(#fff,20%);
+      font-weight:normal;
+      font-size: rem-calc(25);
+    }
+      
+      &:hover{
+        &:before{
+      color:#fff;
+      }
+      }
+    }
+  }
+
+   #menu-primary, #menu-secondary {
+    float: left;
+    margin: rem-calc(10);
+    font-weight: bold;
+    padding-top: rem-calc(6);
+    display:none;
+  }
+
+  }
