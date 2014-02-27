@@ -6,8 +6,10 @@ root 'home#index'
 get 'home' => 'home#home'
 get 'mobile' => 'home#mobile'
 get 'product' => 'home#product'
+get 'product_mobile' => 'home#product_mobile'
 get 'productdesktop' => 'home#productdesktop'
 get 'productdetails' => 'home#productdetails'
+get 'productdetails_mobile' => 'home#productdetails_mobile'
 get 'productdetailsdesktop' => 'home#productdetailsdesktop'
 
   # You can have the root of your site routed with "root"
