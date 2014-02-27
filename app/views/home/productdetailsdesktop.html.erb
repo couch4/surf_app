@@ -42,8 +42,12 @@
 
 <h6>3 HOURS &amp; 14 MINUTES LEFT TO ORDER FOR GUARANTEED UK DELIVERY ON MONDAY 13TH JANUARY 2014</h6>
 <h6 class="highlight">FREE SHIPPING AVAILABLE - NEXT DAY DELIVERY - FREE UK RETURNS - SECURE PAYMENT - HELPFUL CUSTOMER SERVICE</h6>
-<h5 class="product-features">Features:</h5>
-<ul>
+
+<ul class="accordion" data-accordion>
+  <li>
+    <a class="tab-accordion"><h5>Features</h5></a>
+    <div>
+      <ul>
 <li>Men's jacket by Carhartt</li>
 <li>Classic workwear style</li>
 <li>Faux fur borg collar</li>
@@ -60,6 +64,26 @@
 <p>Classic workwear is a timeless choice and the Carhartt Sheffield jacket totally embodies such an ethos. Offering full sherpa lining, branded button closure and a sharp blue collar aesthetic, give your style a swift hunter-gatherer charge.</p>
 
 <p class="strong">Product Code: 140166</p>
+      </div>
+  </li>
+  <li>
+    <a class="tab-accordion"><h5>Sizes</h5></a>
+    <div>
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+  <li>
+    <a class="tab-accordion"><h5>Shipping</h5></a>
+    <div>
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+</ul>
+
+
+
+
+
 
 </div>
   <div class="small-12 medium-12 large-3 column product-items product-thumb">
@@ -90,5 +114,43 @@
   </div>
 
 
+<script>
 
+
+$('.tab-accordion').each(function(){
+
+  var acc = $(this).next('div');
+
+if(!acc.attr('initH')) acc.attr('initH', (acc.height()+20));
+
+acc.css({"height":"0","display":"none"});
+
+});
+    
+
+$('.tab-accordion').click(function() {
+
+
+var toggle = $(this).next('div');
+  
+  if($(this).next('div').height() != 0) {
+    $(this).removeClass("active");
+    TweenLite.to(toggle, .2, {css:{opacity:0},onComplete:function(){
+      TweenLite.to(toggle, .4, {css:{height: 0},ease:Expo.easeInOut,onComplete:function(){
+        toggle.css("display","none");
+        
+      }});
+  }});
+  }
+  else {
+    toggle.css({"display":"block","opacity":"0"});
+    $(this).addClass("active");
+    TweenLite.to(toggle, .4, {css:{height: toggle.attr('initH')},ease:Expo.easeInOut,onComplete:function(){
+
+TweenLite.to(toggle, .4, {css:{opacity:1}});
+
+    }});
+  }
+});
+</script>
 

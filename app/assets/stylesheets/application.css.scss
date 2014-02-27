@@ -17,9 +17,7 @@
 @import "foundation_and_overrides";
 // @import "nav";
 
-$highlight-color: #1ab8d2;
-$available-color: #048f43;
-$body-copy: rem-calc(11);
+
 
 body,html {
   height:100%;
@@ -46,20 +44,6 @@ body,html {
  }
 
 .search-bar{
-
-
-
-// input[type=text]{
-//   margin:0;
-//   padding:0 10px;
-//   color:$primary-color !important;
-//   font-size: rem-calc(9);
-//   color: $primary-color !important;
-//   letter-spacing: 0.1rem;
-//   height:rem-calc(30);
-// }
-
-
 
 .left{
 position:relative;
@@ -968,9 +952,9 @@ strong {
 /////////////////////////
 
  .crumbs {
-font-size: 11px;
+font-size: rem-calc(15);
 font-style: italic;
-margin: 20px 0 30px;
+margin: rem-calc(20) 0 rem-calc(30);
 
   }
 
@@ -980,9 +964,9 @@ margin: 20px 0 30px;
  
 
   .fhead {
-    font-size: 12px;
+    font-size: rem-calc(12);
 width: 100%;
-padding-bottom: 5px;
+padding-bottom: rem-calc(5);
 border-bottom: dashed 1px rgba(0,0,0,0.2);
 margin:rem-calc(15) 0;
 
@@ -1010,6 +994,86 @@ margin:0;
 }
 
 }
+
+
+
+/////////////////////ACCORDION
+
+// ::selection { background: transparent; }
+
+.accordion{
+  width: 100%;
+  display: block;
+  opacity: .9;
+  margin:0 0 rem-calc(20);
+  list-style: none;
+  overflow: hidden;
+
+  >li{
+      list-style: none;
+      margin:0 0 rem-calc(2);
+    >div{
+    overflow:hidden;
+    padding:rem-calc(10);
+    background: lighten( $primary-color,98%);
+    color: lighten( $primary-color,20%);
+
+  }
+
+  }
+}
+.tab-accordion{
+  cursor: pointer;
+ 
+  background: lighten( $primary-color,90%);
+  width:100%;
+  padding: rem-calc(10);
+  display:block;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+  &:after{
+    content: "\f198";
+    font-family: "foundation-icons";
+  display: block;
+    position:absolute;
+    right:rem-calc(15);
+    top:rem-calc(10);
+    transition: all 0.2s ease-in-out;
+    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+
+  h5{
+     // color:#FFF !important;
+     margin:0;
+     font-weight:bold;
+  }
+&:hover,&.active {
+    background: lighten( $primary-color,95%);
+    padding-left:rem-calc(12);
+    transition: all .2s ease-in-out;
+    
+}
+
+&.active{
+  border-bottom: 1px dashed lighten( $primary-color,70%);
+    
+
+&:after{
+top:rem-calc(12);
+right:rem-calc(18);
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+    }
+
+}
+
+
+
+
+
 
 
 ///////////////ICONS
