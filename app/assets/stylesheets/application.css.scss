@@ -34,6 +34,10 @@ body,html {
   
 }
 
+.main{
+  margin:0;
+}
+
 .off-canvas-wrap,.inner-wrap {
   height:100%;   
 }
@@ -433,6 +437,8 @@ font-size: 14px !important;
   opacity:0;
   transition: 0.2s linear opacity;
   background: rgba(0,0,0,0.2);
+  top:40% !important;
+  margin-top:rem-calc(-30) !important;
 }
 
 .orbit-bullets {
@@ -1101,7 +1107,7 @@ right:rem-calc(18);
 }
 
 .fi-list:before {
-  content: "\f169";
+  content: "  ";
 }
 
 .fi-play:before {
