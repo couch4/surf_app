@@ -34,6 +34,10 @@ body,html {
   
 }
 
+.main{
+  margin:0;
+}
+
 .off-canvas-wrap,.inner-wrap {
   height:100%;   
 }
@@ -433,6 +437,8 @@ font-size: 14px !important;
   opacity:0;
   transition: 0.2s linear opacity;
   background: rgba(0,0,0,0.2);
+  top:40% !important;
+  margin-top:rem-calc(-30) !important;
 }
 
 .orbit-bullets {
@@ -1080,7 +1086,9 @@ right:rem-calc(18);
 
 
 
-.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before,.fi-check:before, .fi-stop:before  {
+
+.fi-magnifying-glass:before, .fi-shopping-bag:before, .fi-arrow-left:before, .fi-play:before, .fi-social-facebook:before, .fi-social-twitter:before, .fi-social-pinterest:before, .fi-social-google-plus:before, .fi-social-youtube:before, .fi-social-instagram:before,.fi-check:before,.fi-list:before  {
+
   font-family: "foundation-icons";
   display: inline-block;
 }
@@ -1100,11 +1108,13 @@ right:rem-calc(18);
   top: rem-calc(-7);
 }
 
+.fi-list:before {
+  content: "  ";
+}
+
 .fi-play:before {
   content: "\f198";
-  position: absolute;
-  left: rem-calc(20);
-  color: rgba(0, 0, 0, 0.2);
+
 }
 
 .fi-social-facebook:before {

@@ -154,4 +154,125 @@
         
   </div>
 
+  <div id="menu-dropdown-nav" class="show-for-medium-down row">
+    <div class="small-12 column">
+    <div class="tab-bar">
+    <a class="menu-icon right" id="button-dropdown"><div class="show-for-medium">MENU</div></a>
+  </div>
+  <div class="menus">
+  <ul id="menu-primary">
+    <li><a class="button-primary-nav">MENS</a></li>
+    <li><a class="button-primary-nav">WOMENS</a></li>
+    <li><a class="button-primary-nav">BOYS</a></li>
+    <li><a class="button-primary-nav">GIRLS</a></li>
+    <li><a class="button-primary-nav">INFANTS</a></li>
+    <li><a class="button-primary-nav">SNOW</a></li>
+    <li><a class="button-primary-nav">SURF</a></li>
+    <li><a class="button-primary-nav">SKATE</a></li>
+    <li><a class="button-primary-nav">OUTDOORS</a></li>
+    <li><a class="button-primary-nav">BY BRAND</a></li>
+    <li><a class="button-primary-nav">SALE</a></li>
+  </ul>
+
+  <ul id="menu-secondary">
+    <li><a class="button-secondary-nav">NEW IN</a></li>
+    <li><a class="button-secondary-nav">SALE</a></li>
+    <li><a class="button-secondary-nav">SEASONAL</a></li>
+    <li><a class="button-secondary-nav">FEATURED</a></li>
+    <li><a class="button-secondary-nav">CLOTHING &amp; ACCESSORIES</a></li>
+    <li><a class="button-secondary-nav">FOOTWEAR</a></li>
+    <li><a class="button-secondary-nav">EQUIPMENT</a></li>
+    <li><a class="button-back">BACK</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+<script>
+
+
+
+
+document.onreadystatechange = function () {
+  var state = document.readyState;
+
+  if (state == 'interactive') {
+      init();
+      }
+    };
+
+init = function(){
+
+var mn = $("#menu-dropdown-nav");
+var mp = $('#menu-primary');
+  var ms = $('#menu-secondary');
+  var tb = $('#menu-dropdown-nav').find('.tab-bar');
+
+  var currMenu = mp;
+
+  console.log(tb.height());
+
+$("#button-dropdown").click(function(){
+
+var newHeight = mp.height()+tb.height()+10;
+
+  if (mn.hasClass("active")){
+    currMenu.fadeOut(200,function(){
+    mn.animate({height:tb.height()},100,function(){
+    $('#menu-primary').css({"marginLeft":"10"});
+    $('#menu-secondary').css({"marginLeft":"100%"});
+    // mn.css("opacity","0");
+    });
+    });
+  }
+  else {
+    mn.animate({height:newHeight},200,function(){
+    mp.fadeIn(400);
+    });
+  }
+  mn.toggleClass("active");
+});
+
+$(".button-primary-nav").click(function(){
+
+  
+  mp.animate({marginLeft:'-100%'}, 100);
+   
+  var newHeight = ms.height()+tb.height()+10;
+
+  ms.animate({marginLeft:0},300);
+  ms.fadeIn(50);
+  mp.fadeOut(50);
+  mn.animate({height:newHeight},300);
+
+  currMenu = ms;
+
+});
+
+
+$(".button-back").click(function(){
+
+  ms.animate({marginLeft:'100%'}, 100);
+   
+  var newHeight = mp.height()+45;
+
+  mp.animate({marginLeft:'0'},300);
+  mp.fadeIn(50);
+  ms.fadeOut(50);
+  mn.animate({height:newHeight},300);
+
+  currMenu = mp;
+
+});
+
+
+$(".button-more").click(function(){
+
+  $('#menu-primary').animate({marginBottom:'100%'}, 100);
+
+});
+
+};
+
+</script>
  
