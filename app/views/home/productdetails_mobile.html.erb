@@ -1,43 +1,44 @@
 <div class="row"> 
   <div class="row products">
     <div class="small-12 medium-6 large-4 column product-items">
-      <div class="small-12 column">
-        <div class="item-img-main"><%= image_tag ("products/jackets/productJacket.jpg") %></div>
-      </div>
-      <div class="small-12 column product-thumb">
-        <ul class="small-block-grid-3">
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket1.jpg')%></div></li>
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket2.jpg')%></div></li>
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket3.jpg')%></div></li>
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket4.jpg')%></div></li>
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket5.jpg')%></div></li>
-          <li><div class="item-img"><%=image_tag ('products/jackets/thumbProductJacket6.jpg')%></div></li>
+      
+
+      <div class="row">
+        <ul class="example-orbit" data-orbit>
+          <li>
+            <%= image_tag ("products/jackets/productJacket.jpg") %>
+          </li>
+          <li>
+            <%=image_tag ('products/jackets/thumbProductJacket1.jpg')%>          
+          </li>
+          <li>
+            <%=image_tag ('products/jackets/thumbProductJacket2.jpg')%>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="small-12 medium-6 large-5 column product-description">
-      <h3>Carhartt Sheffield Jacket<small>Blue Penny</small></h3>
-      <h4>£164.99</h4>
-      <div class="row item-selections">
+    <div class="small-11 small-centered medium-6 large-5 column product-description">
+      <h2>Carhartt Sheffield Jacket<small>Blue Penny</small></h2>
+      <h3>£164.99</h3>
+      <div class="row small-11 small-centered item-selections">
         <div class="small-3 column">
-          <span>Quantity</span><input type="textbox">
+          <span></span><input type="textbox">
         </div>
         <div class="small-4 column">
-          <select><option>Select</option></select>
+          <select><option>size</option></select>
         </div>
         <div class="small-5 column">
-          <a class="button">Add to Basket</a>
+          <a class="button">Add&nbsp;to&nbsp;Basket</a>
         </div>
       </div>
       <div class="row">
         <div class="small-12 column"><hr></div>
       </div>
-
-
       <h6 class="available"><span class="fi-check size-14"></span> IN STOCK</h6>
       <h6>3 HOURS &amp; 14 MINUTES LEFT TO ORDER FOR GUARANTEED UK DELIVERY ON MONDAY 13TH JANUARY 2014</h6>
-      <h6 class="highlight">FREE SHIPPING AVAILABLE - NEXT DAY DELIVERY - FREE UK RETURNS - SECURE PAYMENT - HELPFUL CUSTOMER SERVICE</h6>
+    </div>
 
+    <div class="small-12 small-centered medium-6 large-5 column product-description">
       <ul class="accordion" data-accordion>
         <li>
           <a class="tab-accordion"><h5>Features</h5></a>
@@ -125,6 +126,19 @@
 </div>
 
 <script>
+
+$(document).foundation({
+  orbit: {
+    animation: 'slide',
+    timer_speed: 3000,
+    pause_on_hover: true,
+    animation_speed: 700,
+    navigation_arrows: true,
+    bullets: true,
+    slide_number: false,
+    timer: false
+  }
+});
 
 $('.tab-accordion').each(function(){
 
