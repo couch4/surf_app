@@ -129,6 +129,7 @@ right: 6.2rem;
       $bg: $primary-color,
       $full-width: true
     );
+    text-transform: uppercase;
   }
 
   .custom-button-light {
@@ -137,8 +138,20 @@ right: 6.2rem;
       $bg: $secondary-color,
       $full-width: true
     );
-    $button-font-color: #f39;
-    text-decoration: underline;
+  }
+
+  .custom-dropdown-button {
+    @include button(
+      $padding: rem-calc(9),
+      $bg: $secondary-color,
+      $full-width: true
+    );
+    @include dropdown-button(
+      $padding: large,
+      $pip-color: $primary-color,
+      // Add in base-styles. This can be set to false. Default:true
+      $base-style: true
+    );
   }
 
   .custom-form {
@@ -164,7 +177,49 @@ right: 6.2rem;
     }
   }
 
+  .category-title h4 {
+    text-align: center;
+  }
 
+  .item-selections {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .complete-look, .customers-bought {
+    padding-top: rem-calc(20);
+  }
+
+  .products .product-items ul > li .item-description {
+    width: 100%;
+    position: relative;
+    bottom: 10%;
+    opacity: 1;
+    z-index: 20;
+    color: #000;
+    font-weight: bold;
+    padding: 0 rem-calc(20);
+
+    p {
+      color: #000;
+    }
+
+    h5 {
+      // font-weight: bold;
+      // color: $highlight-color;
+    }
+  }
+
+  .brand-logo {
+    &:after {
+      display: none;
+    }  
+  }
+
+  .sizes {
+    display: none;
+  }
 }
 
 
