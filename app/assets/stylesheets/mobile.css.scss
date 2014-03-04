@@ -129,7 +129,6 @@ right: 6.2rem;
       $bg: $primary-color,
       $full-width: true
     );
-    text-transform: uppercase;
   }
 
   .custom-button-light {
@@ -149,9 +148,13 @@ right: 6.2rem;
     @include dropdown-button(
       $padding: large,
       $pip-color: $primary-color,
-      // Add in base-styles. This can be set to false. Default:true
       $base-style: true
     );
+  }
+
+  #drop li {
+    font-size: rem-calc(12);
+    padding-left: rem-calc(15);
   }
 
   .custom-form {
