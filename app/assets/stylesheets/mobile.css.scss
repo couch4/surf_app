@@ -172,13 +172,21 @@ right: 6.2rem;
 
 @media (max-width:1024px){
 .orbit-container{
+
+  margin-bottom:rem-calc(5);
     .orbit-prev, .orbit-next {
   opacity:1;
+  height:rem-calc(20);
+
+  span:after{
+    font-size:11px;
+  }
 }
 
-.orbit-caption {
+.orbit-caption,.orbit-progress,.orbit-bullets,.orbit-timer {
 display: none;
 }
+
 
   &:hover{
       .orbit-prev, .orbit-next {
@@ -189,6 +197,24 @@ display: none;
 
   }
 
+}
+
+.product-tiles{
+
+  padding:0;
+
+  li{
+
+  margin-bottom:0.25rem;
+
+  &:nth-of-type(2n+1) {
+text-align: right;
+}
+}
+}
+
+.footer {
+  margin:0 !important;
 }
 
 }
