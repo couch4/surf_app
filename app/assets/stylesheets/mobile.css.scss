@@ -123,7 +123,14 @@ right: 6.2rem;
     font-size: 1.5em;
   }
 
-  .custom-button {
+  @mixin custom-button-light {
+    @include button(
+      $bg: $secondary-color,
+      $full-width: true
+    );
+  }
+
+  @mixin custom-button {
     @include button(
       $padding: rem-calc(9),
       $bg: $primary-color,
@@ -131,25 +138,27 @@ right: 6.2rem;
     );
   }
 
-  .custom-button-light {
-    @include button(
-      $padding: rem-calc(9),
-      $bg: $secondary-color,
-      $full-width: true
-    );
-  }
-
-  .custom-dropdown-button {
-    @include button(
-      $padding: rem-calc(9),
-      $bg: $secondary-color,
-      $full-width: true
-    );
+  @mixin custom-dropdown-button {
     @include dropdown-button(
       $padding: large,
       $pip-color: $primary-color,
       $base-style: true
     );
+  }  
+
+  .custom-button {
+    @include custom-button;
+  }
+
+  .custom-dropdown-button-light {
+    @include custom-button-light;
+    @include custom-dropdown-button;
+    padding: rem-calc(9) rem-calc(24) rem-calc(9) rem-calc(9);
+  }
+
+  .custom-dropdown-button-light:before {
+    border-width: rem-calc(4);
+    right: 12%;
   }
 
   #drop li {
@@ -180,8 +189,8 @@ right: 6.2rem;
     }
   }
 
-  .category-title h4 {
-    text-align: center;
+  .page-title {
+    padding-top: rem-calc(6);
   }
 
   .item-selections {
@@ -227,10 +236,6 @@ right: 6.2rem;
   .refine-tab {
     display: none;
     height:0;
-  }
-
-  .nav-social {
-    display: none;
   }
 }
 
