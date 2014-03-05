@@ -14,13 +14,13 @@
           <li><a href="#">Most Recent</a></li>
         </ul>
       </div>
-      <div class="row refine">
+      
         <div class="small-3 column">
-          <a href="#" class="custom-button">REFINE</a>
+          <a id="button-refine" class="custom-button">REFINE</a>
         </div>
       </div>
-    </div>
-    <div class="row refine-list">
+    
+    <div class="row refine-tab">
       <div class="small-3 column">
         <a href="#" class="button expand">CATEGORY</a>
       </div>
@@ -107,48 +107,30 @@
 
 <script>
 
-var list = $('.product-sets').find('ul');
+$('#button-refine').click(function(){
 
-$('#view-3').click(function(){
-
+  var rt = $('.refine-tab');
+  var br = $('#button-refine');
   
 
-if(list.hasClass("large-block-grid-4")){
+  if (br.hasClass("active")){
+    br.removeClass("active");
+    newHeight = 0;
+    rt.fadeOut(500);
+    rt.animate({height:"0"},600);
+  }
+  else {
+    rt.animate({height:"45px"}, 400,function(){
+    br.addClass("active"); 
 
-  list.addClass("large-block-grid-3");
+    });
+    rt.fadeIn(500); 
+      
+  }
 
-  list.removeClass("large-block-grid-4");
-  
-}
+
 
 });
-
-$('#view-4').click(function(){
-
-if(list.hasClass("large-block-grid-3")){
-  list.addClass("large-block-grid-4");
-
-  list.removeClass("large-block-grid-3");
-  
-}
-
-});
-
-$("#swapStyles").change(function(){
-
-var s = $( "select option:selected" ).val();
-
-if (s == "style1"){
-  $('.product-items').css("display","block");
-  $('.product-items2').css("display","none");
-}
-else{
-  $('.product-items').css("display","none");
-  $('.product-items2').css("display","block");
-}
-
-})
-
 
 </script>
 
