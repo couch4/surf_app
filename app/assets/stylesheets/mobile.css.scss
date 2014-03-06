@@ -112,28 +112,10 @@ right: 6.2rem;
     top: rem-calc(-7);
   }
 
-  .nav-social {
-    @include block-grid(
-      $per-row: 6,
-      $spacing: 1em
-    );
-    padding: rem-calc(25) rem-calc(20) rem-calc(0) rem-calc(20);
-    position: relative;
-    text-align: center;
-    font-size: 1.5em;
-  }
-
-  @mixin custom-button-light {
-    @include button(
-      $bg: $secondary-color,
-      $full-width: true
-    );
-  }
-
   @mixin custom-button {
     @include button(
-      $padding: rem-calc(9),
-      $bg: $primary-color,
+      $padding: rem-calc(8),
+      $bg: #FFF,
       $full-width: true
     );
   }
@@ -141,30 +123,56 @@ right: 6.2rem;
   @mixin custom-dropdown-button {
     @include dropdown-button(
       $padding: large,
-      $pip-color: $primary-color,
+      $pip-color: lighten($primary-color, 60%),
       $base-style: true
     );
   }  
 
   .custom-button {
     @include custom-button;
+    border: rem-calc(1) solid $primary-color;
+    font-size: 0.6em;
+    &:hover {
+      background: transparent;
+    }
   }
 
-  .custom-dropdown-button-light {
-    @include custom-button-light;
+  .custom-dropdown-button {
+    @include custom-button;
     @include custom-dropdown-button;
+    border: rem-calc(1) solid lighten($primary-color, 70%);
+    color: lighten($primary-color, 50%);
     padding: rem-calc(9) rem-calc(24) rem-calc(9) rem-calc(9);
+    font-size: 0.6em;
+    &:hover {
+      background: transparent;
+    }
   }
 
-  .custom-dropdown-button-light:before {
+  .custom-dropdown-button:before {
     border-width: rem-calc(4);
     right: 12%;
   }
 
-  #drop li {
-    font-size: 0.6em;
-    padding-left: rem-calc(15);
+  #drop {
+    color: $primary-color;  
+    li:first-child {
+      padding-top: rem-calc(6);
+    }
+    li {
+      font-size: 0.6em;
+      text-align: center;
+      line-height: 0.8em;
+    }
+    li:last-child {
+      padding-bottom: rem-calc(5);
+    }
   }
+
+  .f-dropdown:before, .f-dropdown:after {
+
+  }
+
 
   .custom-form {
     padding: 0;
@@ -190,13 +198,21 @@ right: 6.2rem;
   }
 
   .page-title {
-    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(7);
+    h2 {
+      letter-spacing: 0.05em;
+      font-family: "ArialMT" !important;
+    }
   }
 
   .item-selections {
     width: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  .item-img:after {
+    background: none !important;
   }
 
   .complete-look, .customers-bought {
@@ -216,11 +232,6 @@ right: 6.2rem;
     p {
       color: #000;
     }
-
-    h5 {
-      // font-weight: bold;
-      // color: $highlight-color;
-    }
   }
 
   .brand-logo {
@@ -232,10 +243,71 @@ right: 6.2rem;
   .sizes {
     display: none;
   }
-  
-  .refine-tab {
+
+  .tab-refine {
     display: none;
     height:0;
+    width: 100%;
+    margin-bottom: rem-calc(5);
+    ul {      
+      font-size: 0.6em;
+      margin: 0;
+      li {
+        display: block;
+        list-style: none;
+      }
+    }
+
+    .tab-refine-border {
+      height: rem-calc(5);
+      border-bottom: rem-calc(1) solid $primary-color;
+    }
+
+    #tab-primary, #tab-secondary {
+      margin: 0;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    #tab-secondary {
+      display: none;
+    }
+
+    .tab-primary-nav, .tab-secondary-nav {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-top: dashed rem-calc(1) rgba(0,0,0,0.1);
+      padding:rem-calc(10) rem-calc(15) rem-calc(7);
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background: rgba(0,0,0,0.05);
+      }
+    }
+    .button-back {
+      padding:rem-calc(10) rem-calc(15) rem-calc(7);
+      width: 100%;
+      background: darken($secondary-color,7%);
+      display: block;
+      color: #fff;
+      font-family: "ArialMT";
+      &:hover{
+        background: $secondary-color;
+      }
+    }
+  }
+
+  .tab-social {
+    @include block-grid(
+      $per-row: 6,
+      $spacing: 1em
+    );
+    display: none;
+    height:0;
+    padding: rem-calc(25) rem-calc(20) rem-calc(0) rem-calc(20);
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
   }
 }
 

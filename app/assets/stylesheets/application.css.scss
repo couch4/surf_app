@@ -398,7 +398,7 @@ color: $available-color !important;
 
 @media (max-width:900px){
   h2{
-font-size: 14px !important;
+font-size: rem-calc(14);
 
   }
 

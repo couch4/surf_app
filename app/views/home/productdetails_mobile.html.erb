@@ -3,7 +3,7 @@
     <div class="small-12 medium-6 large-4 column product-items">
 
       <div class="row">
-        <ul class="nav-social">
+        <ul class="tab-social">
           <li><a class="fi-social-facebook"></a></li>
           <li><a class="fi-social-twitter"></a></li>
           <li><a class="fi-social-pinterest"></a></li>
@@ -14,9 +14,9 @@
       </div>
 
       <div class="small-12 column">
-        <div class="row button-share">
-          <div class="small-2 column right">
-            <a href="#" class="custom-button-light">SHARE</a>
+        <div class="row">
+          <div class="small-4 column right">
+            <a id="button-share" class="custom-button">SHARE</a>
           </div>
         </div>
       </div>
@@ -133,6 +133,27 @@
 </div>
 
 <script>
+
+$('#button-share').click(function(){
+
+  var ts = $('.tab-social');
+  var bs = $('#button-share');
+  
+  if (bs.hasClass("active")){
+    bs.removeClass("active");
+    newHeight = 0;
+    ts.fadeOut(500);
+    ts.animate({height:"0"},600);
+  }
+  else {
+    ts.animate({height:"30px"}, 400,function(){
+    bs.addClass("active"); 
+
+    });
+    ts.fadeIn(500);    
+  }
+});
+
 
 $(document).foundation({
   orbit: {
