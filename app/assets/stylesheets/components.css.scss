@@ -1,0 +1,283 @@
+/////////   ORBIT SLIDER
+@import "foundation_and_overrides";
+
+.orbit-container{
+
+  cursor:pointer;
+
+  .orbit-timer{
+
+    width:100% !important;
+    position:absolute !important;
+    height:rem-calc(10);
+    bottom:rem-calc(58);
+    top: auto !important;
+    left:0;
+
+
+  > span{
+
+    display: none !important;
+  }
+
+  .orbit-progress {
+    background: $highlight-color !important;
+    height:rem-calc(5) !important;
+  }
+}
+
+.orbit-prev, .orbit-next {
+  opacity:0;
+  transition: 0.2s linear opacity;
+  background: rgba(0,0,0,0.2);
+  top:45% !important;
+  margin-top:rem-calc(-30) !important;
+}
+
+.orbit-slide-number{
+  display:none;
+}
+
+.orbit-bullets {
+
+  margin-top: rem-calc(10);
+}
+
+.orbit-slides-container{
+  overflow:hidden;
+}
+
+.orbit-caption {
+bottom:rem-calc(-50) !important;
+height:rem-calc(50) !important;
+background: rgba(0,0,0,0.4);
+transition: 0.3s ease-out all;
+
+.sub-nav {
+  margin:rem-calc(5) auto !important;
+  color:#fff;
+  border:none;
+  text-align: center;
+  
+  li {
+    position:relative;
+    float:none;
+
+    &:before{
+      color:$secondary-color;
+      left:0;
+      margin-left: -4px !important;
+    padding: 0.2rem 0 !important;
+
+    }
+
+    a {
+  color:#fff;
+  font-weight:800;
+
+  &:hover{
+    background:none;
+    color: $highlight-color !important;
+  }
+}
+
+  }
+}
+
+}
+
+&:hover {
+
+.orbit-prev, .orbit-next {
+  opacity:1;
+}
+
+.orbit-caption {
+bottom:0 !important;
+
+
+
+
+
+}
+
+
+}
+
+}
+
+.promo-bar {
+  background: #1ab8d2;
+  text-align:center;
+
+  h3{
+display:inline-block;
+color: #ccecf8;
+padding:rem-calc(5) rem-calc(10) 0;
+margin:0;
+border-right: solid 1px #ccecf8;
+
+  }
+
+  a{
+  border-right: solid 1px #ccecf8;
+  display:inline-block;
+color: #ccecf8;
+padding: rem-calc(5) 0.3125rem rem-calc(3);
+vertical-align: top;
+margin-top: rem-calc(6);
+  font-size:rem-calc(11);
+&:last-child{
+  border:none;
+  }
+
+  &:hover{
+  color:#fff;
+  }
+
+  }
+
+  
+
+
+
+}
+
+/////////////////////ACCORDION
+
+
+.accordion{
+  width: 100%;
+  display: block;
+  opacity: .9;
+  margin:0 0 rem-calc(20);
+  list-style: none;
+  overflow: hidden;
+
+  >li{
+      list-style: none;
+      margin:0 0 rem-calc(2);
+    >div{
+    overflow:hidden;
+    padding:rem-calc(10);
+    background: lighten( $primary-color,98%);
+    color: lighten( $primary-color,20%);
+
+  }
+
+  }
+}
+.tab-accordion{
+  cursor: pointer;
+ 
+  background: lighten( $primary-color,90%);
+  width:100%;
+  padding: rem-calc(10);
+  display:block;
+  position:relative;
+  transition: all 0.2s ease-in-out;
+  &:after{
+    content: "\f198";
+    font-family: "foundation-icons";
+  display: block;
+    position:absolute;
+    right:rem-calc(15);
+    top:rem-calc(10);
+    transition: all 0.2s ease-in-out;
+    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+
+
+  h5{
+     // color:#FFF !important;
+     margin:0;
+     font-weight:bold;
+  }
+&:hover,&.active {
+    background: lighten( $primary-color,95%);
+    padding-left:rem-calc(12);
+    transition: all .2s ease-in-out;
+    
+}
+
+&.active{
+  border-bottom: 1px dashed lighten( $primary-color,70%);
+    
+
+&:after{
+top:rem-calc(12);
+right:rem-calc(18);
+      transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+    }
+
+}
+
+.content-acc{
+overflow:hidden;
+height:0;
+
+> div{
+  opacity:0;
+}
+
+}
+
+
+///////////////////////////////////// BRAND SELECTOR
+
+
+.brands {
+
+  margin-top: rem-calc(30) !important;
+
+  .our-brands-logo {
+  text-align: center;
+
+  img {
+   margin: rem-calc(10) 0 rem-calc(30) !important; 
+  }
+}
+
+
+.tabs-content {
+  margin: rem-calc(10) 0 0;  
+}
+
+.tabs-content li {
+  list-style: none;
+  float: left;
+
+}
+
+.tabs dd {
+  width: 20%;
+  text-align: center;
+  border-bottom: solid 1px $primary-color;
+  // white-space: nowrap;
+  a{
+padding-left:0 !important;
+padding-right:0 !important;
+    transition: 0.2s ease-in-out all;
+  }
+  
+
+}
+
+.tabs .active{
+border: solid 1px $primary-color;
+border-bottom:#fff;
+
+a{
+padding-bottom: 0.55rem !important;
+padding-top: 1.5rem !important;
+
+}
+}
+
+
+
+  
+}

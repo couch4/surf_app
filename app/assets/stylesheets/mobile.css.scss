@@ -112,9 +112,14 @@ right: 6.2rem;
     top: rem-calc(-7);
   }
 
+  @mixin button-full-width {
+    @include button(
+      $full-width: true
+    );
+  }
+
   @mixin custom-button {
     @include button(
-      $padding: rem-calc(8),
       $bg: #FFF,
       $full-width: true
     );
@@ -128,10 +133,18 @@ right: 6.2rem;
     );
   }  
 
+  .button {
+    @include button-full-width;
+    font-family: "ArialMTBlack" !important;
+  }
+
   .custom-button {
     @include custom-button;
     border: rem-calc(1) solid $primary-color;
+    padding: rem-calc(10) rem-calc(8) rem-calc(8) rem-calc(8);
     font-size: 0.7em;
+    z-index: 50;
+    position: absolute;
     &:hover {
       background: transparent;
     }
@@ -142,7 +155,7 @@ right: 6.2rem;
     @include custom-dropdown-button;
     border: rem-calc(1) solid $primary-color;
     color: $primary-color;
-    padding: rem-calc(9) rem-calc(24) rem-calc(9) rem-calc(9);
+    padding: rem-calc(10) rem-calc(20) rem-calc(8) rem-calc(9);
     font-size: 0.7em;
     &:hover {
       background: transparent;
@@ -151,7 +164,7 @@ right: 6.2rem;
 
   .custom-dropdown-button:before {
     border-width: rem-calc(4);
-    right: 12%;
+    right: 8%;
   }
 
   #drop {
@@ -213,29 +226,13 @@ right: 6.2rem;
     width: 100%;
     padding: 0;
     margin: 0;
-  }
-
-  .item-img:after {
-    background: none !important;
-  }
-
-  .complete-look, .customers-bought {
-    padding-top: rem-calc(20);
-  }
-
-  .products .product-items ul > li .item-description {
-    width: 100%;
-    position: relative;
-    bottom: 10%;
-    opacity: 1;
-    z-index: 20;
-    color: #000;
-    font-weight: bold;
-    padding: 0 rem-calc(20);
-
-    p {
-      color: #000;
+    div:first-child {
+      padding-left: 0;
     }
+  }
+
+  .item-img-main {
+    text-align: center;
   }
 
   .brand-logo {
@@ -301,7 +298,7 @@ right: 6.2rem;
       }
     }
     .button-back-border {
-      height: rem-calc(34);
+      height: rem-calc(36);
       border-top: rem-calc(1) solid $primary-color;
     }
   }
@@ -311,12 +308,53 @@ right: 6.2rem;
       $per-row: 6,
       $spacing: 1em
     );
-    display: none;
-    height:0;
     padding: rem-calc(25) rem-calc(20) rem-calc(0) rem-calc(20);
     position: relative;
     text-align: center;
     font-size: 1.5em;
+  }
+
+  #button-share {
+    margin: rem-calc(10) 0 0 0;
+  }
+
+  .tab-accordion h5 {
+    font-size: 1em;
+    letter-spacing: 0.04em;
+    padding-left: rem-calc(6);
+  }
+
+  .product-description {
+    letter-spacing: 0.04em;
+    .product-title {
+      padding-top: rem-calc(4);
+      text-align: center;
+    }
+    .product-price {
+      font-family: "ArialMTBlack";
+      font-size: 0.8em;
+      text-align: center;
+      padding: rem-calc(5) 0;
+    }
+  }
+
+  .products .product-items ul > li .item-description {
+    width: 100%;
+    position: relative;
+    bottom: 10%;
+    opacity: 1;
+    z-index: 20;
+    color: #000;
+    font-weight: bold;
+    padding: 0 rem-calc(20);
+
+    p {
+      color: #000;
+    }
+  }
+
+  .complete-look, .customers-bought {
+    padding-top: rem-calc(20);
   }
 }
 

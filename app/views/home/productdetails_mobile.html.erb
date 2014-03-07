@@ -1,52 +1,57 @@
 <div class="row"> 
   <div class="row products">
     <div class="small-12 medium-6 large-4 column product-items">
-
-      <div class="row">
-        <ul class="tab-social">
-          <li><a class="fi-social-facebook"></a></li>
-          <li><a class="fi-social-twitter"></a></li>
-          <li><a class="fi-social-pinterest"></a></li>
-          <li><a class="fi-social-google-plus"></a></li>
-          <li><a class="fi-social-youtube"></a></li>
-          <li><a class="fi-social-instagram"></a></li>
-        </ul>
-      </div>
-
-      <div class="small-12 column">
+      <div id="social-links" class="content-acc">
         <div class="row">
-          <div class="small-4 column right">
-            <a id="button-share" class="custom-button">SHARE</a>
+          <ul class="tab-social">
+            <li><a class="fi-social-facebook"></a></li>
+            <li><a class="fi-social-twitter"></a></li>
+            <li><a class="fi-social-pinterest"></a></li>
+            <li><a class="fi-social-google-plus"></a></li>
+            <li><a class="fi-social-youtube"></a></li>
+            <li><a class="fi-social-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="small-11 column">
+        <div class="row">
+          <div class="small-3 column right">
+            <a id="button-share" class="custom-button button-acc" data-toggle="social-links">SHARE</a>
           </div>
         </div>
       </div>
-
-
-      <div class="row">
-        <ul class="example-orbit" data-orbit>
-          <li>
-            <%= image_tag ("products/jackets/productJacket.jpg") %>
-          </li>
-          <li>
-            <%=image_tag ('products/jackets/thumbProductJacket1.jpg')%>          
-          </li>
-          <li>
-            <%=image_tag ('products/jackets/thumbProductJacket2.jpg')%>
-          </li>
-        </ul>
+      <div class="row products">
+        <div class="small-12 medium-6 large-4 column product-items">
+          <div class="small-12 column">
+            <div class="item-img-main"><%= image_tag ("products/jackets/productJacket.jpg") %>
+            </div>
+          </div>
+          <!-- <div class="small-12 column product-thumb">
+            <ul class="medium-block-grid-3">
+              <li><div class="item-img"><%#image_tag ('products/jackets/thumbProductJacket1.jpg')%></div>
+              </li>
+              <li><div class#"item-img"><%#image_tag ('products/jackets/thumbProductJacket2.jpg')%></div>
+              </li>
+            <li><div class#"item-img"><%#image_tag ('products/jackets/thumbProductJacket3.jpg')%></div>
+            </li>
+            <li><div class#"item-img"><%#image_tag ('products/jackets/thumbProductJacket4.jpg')%></div>
+            </li>
+            <li><div class#"item-img"><%#image_tag ('products/jackets/thumbProductJacket5.jpg')%></div>
+            </li>
+            <li><div class#"item-img"><%#image_tag ('products/jackets/thumbProductJacket6.jpg')%></div>
+            </li>
+          </ul>
+        </div> -->
+        </div>
       </div>
     </div>
+
     <div class="small-11 small-centered medium-6 large-5 column product-description">
-      <h2>Carhartt Sheffield Jacket<small>Blue Penny</small></h2>
-      <h3>£164.99</h3>
-      <div class="row small-12 small-centered item-selections">
-        <div class="small-3 column">
-          <span></span><input type="textbox" value="1">
-        </div>
-        <div class="small-4 column">
-          <select><option>size</option></select>
-        </div>
-        <div class="small-5 column">
+      <h3 class="product-title">Carhartt Sheffield Jacket</h3>
+      <h4 class="product-price">£164.99</h4>
+      <div class="row small-12 item-selections">
+
+         <div class="small-12 column">
           <a class="button">Add&nbsp;to&nbsp;Bag</a>
         </div>
       </div>
@@ -134,39 +139,13 @@
 
 <script>
 
-$('#button-share').click(function(){
 
-  var ts = $('.tab-social');
-  var bs = $('#button-share');
-  
-  if (bs.hasClass("active")){
-    bs.removeClass("active");
-    newHeight = 0;
-    ts.fadeOut(500);
-    ts.animate({height:"0"},600);
-  }
-  else {
-    ts.animate({height:"30px"}, 400,function(){
-    bs.addClass("active"); 
-
-    });
-    ts.fadeIn(500);    
-  }
-});
-
-
-$(document).foundation({
+$('.example-orbit').foundation({
   orbit: {
-    animation: 'slide',
-    timer_speed: 3000,
-    pause_on_hover: true,
-    animation_speed: 700,
-    navigation_arrows: true,
-    bullets: true,
-    slide_number: false,
-    timer: false
+    timer:false
   }
 });
+
 
 $('.tab-accordion').each(function(){
 
@@ -203,6 +182,76 @@ TweenLite.to(toggle, .4, {css:{opacity:1}});
     }});
   }
 });
+
+  var accBtn = $('.button-acc');
+    var accContent = $('.content-acc');
+
+
+    accBtn.click(function() {
+
+        var cb = $(this);
+        var dt = "#" + $(this).attr("data-toggle");
+        var dc = $(dt).children(":first-child");
+        var dh = $(dc).outerHeight();
+
+        
+
+        if (!cb.hasClass("open")) {
+
+            $(dt).animate({
+                    height: dh
+                }, 500);
+            dc.animate({
+                opacity: 1
+            }, 400, function() {
+
+                cb.addClass("open");
+
+            });
+
+        } else {
+            $(dt).animate({
+                    height: 0
+                }, 300);
+            dc.animate({
+                opacity: 0
+            }, 100, function() {
+
+                cb.removeClass("open");
+
+            });
+        }
+
+
+    });
+
+    $(window).resize(function() {
+
+        accBtn.each(function() {
+
+            console.log($(this));
+
+            if ($(this).hasClass("open")) {
+
+                var dt = "#" + $(this).attr("data-toggle");
+                var dc = $(dt).children(":first-child");
+
+                $(dt).css({
+                    "height": "0"
+                });
+                dc.css({
+                    "opacity": "0"
+                });
+                $(this).removeClass("open");
+            }
+
+
+        })
+
+    });
+
+
 </script>
+
 
 
