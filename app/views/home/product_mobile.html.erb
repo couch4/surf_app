@@ -6,6 +6,9 @@
         <h2>men's jeans</h2>
       </div>
       <div class="small-5 column">
+        <a id="button-refine" class="custom-button">REFINE</a>
+      </div>
+      <div class="small-5 column">
         <a data-dropdown="drop" class="custom-dropdown-button">SORT BY</a><br>
         <ul id="drop" data-dropdown-content class="f-dropdown">
           <li><a href="#">Bestsellers</a></li>
@@ -13,9 +16,6 @@
           <li><a href="#">Price (Lo-Hi)</a></li>
           <li><a href="#">Most Recent</a></li>
         </ul>
-      </div>
-      <div class="small-4 column">
-        <a id="button-refine" class="custom-button">REFINE</a>
       </div>
     </div>
     <div class="row tab-refine">
@@ -33,7 +33,21 @@
         <li><a class="tab-secondary-nav">SKINNY</a></li>
         <li><a class="tab-secondary-nav">SLIM</a></li>
         <li><a class="tab-secondary-nav">TAPERED</a></li>
-        <li><a class="button-back">BACK</a></li>
+        <li>
+          <ul>
+            <li class="small-3 column">
+              <a class="button-back">BACK</a>
+            </li>
+            <li class="small-5 column">
+              <a class="button-back">CLEAR STYLE</a>
+            </li>
+            <li class="small-4 column">
+              <a class="button-back">CLEAR ALL</a>
+            </li>
+          </ul>
+          <div class="button-back-border">
+          </div>
+        </li>
       </ul>
       <div class="tab-refine-border">
       </div>
@@ -122,12 +136,12 @@ $('#button-refine').click(function(){
     newHeight = 0;
     tr.fadeOut(500);
     tr.animate({height:"0"},600, function(){
-    // $('#tab-primary').css({"marginBottom":"10"});
-    // $('#tab-primary').css({"marginBottom":"-100%"});
+    $('#tab-primary').css({"marginBottom":"0"});
+    // $('#tab-secondary').css({"marginBottom":"-100%"});
     });
   }
   else {
-    tr.animate({height:"184px"}, 400,function(){
+    tr.animate({height:"192px"}, 400,function(){
     br.addClass("active"); 
 
     });

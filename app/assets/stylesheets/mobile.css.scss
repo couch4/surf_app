@@ -123,7 +123,7 @@ right: 6.2rem;
   @mixin custom-dropdown-button {
     @include dropdown-button(
       $padding: large,
-      $pip-color: lighten($primary-color, 60%),
+      $pip-color: $primary-color,
       $base-style: true
     );
   }  
@@ -131,7 +131,7 @@ right: 6.2rem;
   .custom-button {
     @include custom-button;
     border: rem-calc(1) solid $primary-color;
-    font-size: 0.6em;
+    font-size: 0.7em;
     &:hover {
       background: transparent;
     }
@@ -140,10 +140,10 @@ right: 6.2rem;
   .custom-dropdown-button {
     @include custom-button;
     @include custom-dropdown-button;
-    border: rem-calc(1) solid lighten($primary-color, 70%);
-    color: lighten($primary-color, 50%);
+    border: rem-calc(1) solid $primary-color;
+    color: $primary-color;
     padding: rem-calc(9) rem-calc(24) rem-calc(9) rem-calc(9);
-    font-size: 0.6em;
+    font-size: 0.7em;
     &:hover {
       background: transparent;
     }
@@ -166,6 +166,9 @@ right: 6.2rem;
     }
     li:last-child {
       padding-bottom: rem-calc(5);
+    }
+    a {
+      color: #000;
     }
   }
 
@@ -202,6 +205,7 @@ right: 6.2rem;
     h2 {
       letter-spacing: 0.05em;
       font-family: "ArialMT" !important;
+      font-size: 0.9em;
     }
   }
 
@@ -278,22 +282,27 @@ right: 6.2rem;
       display: block;
       width: 100%;
       border-top: dashed rem-calc(1) rgba(0,0,0,0.1);
-      padding:rem-calc(10) rem-calc(15) rem-calc(7);
+      padding:rem-calc(10) rem-calc(16) rem-calc(7);
       transition: all 0.2s ease-in-out;
       &:hover {
         background: rgba(0,0,0,0.05);
       }
     }
     .button-back {
-      padding:rem-calc(10) rem-calc(15) rem-calc(7);
+      padding-top: rem-calc(14);
       width: 100%;
-      background: darken($secondary-color,7%);
       display: block;
-      color: #fff;
-      font-family: "ArialMT";
+      color: lighten($primary-color,40%);
+      letter-spacing: 0.01em;
+      font-family: "ArialMTBlack";
+      font-size: 1.8em;
       &:hover{
-        background: $secondary-color;
+        color: $highlight-color;
       }
+    }
+    .button-back-border {
+      height: rem-calc(34);
+      border-top: rem-calc(1) solid $primary-color;
     }
   }
 
