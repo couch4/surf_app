@@ -136,8 +136,8 @@ $('#button-refine').click(function(){
     newHeight = 0;
     tr.fadeOut(500);
     tr.animate({height:"0"},600, function(){
-    $('#tab-primary').css({"marginLeft":"0", "opacity":"1"});
-    $('#tab-secondary').css({"marginLeft":"-100", "opacity":"0"});
+    $('#tab-primary').css({"marginLeft":"0", "display":"block"});
+    $('#tab-secondary').css({"marginLeft":"100%", "display":"none"});
     });
   }
   else {
