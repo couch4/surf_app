@@ -131,7 +131,25 @@ right: 6.2rem;
       $pip-color: $primary-color,
       $base-style: true
     );
-  }  
+  }
+
+  // @mixin custom-dropdown-container {
+  //   @include dropdown-container(
+  //     $content: list,
+  //     $triangle: true,
+  //     $max-width: auto
+  //   );
+  // } 
+
+  // .custom-dropdown-container {
+  //   @include custom-button;
+  //   @include custom-dropdown-container;
+  //   $f-dropdown-triangle-offset: 48%;
+  // }
+
+  .f-dropdown:after {
+    left: 48.25% !important;
+  }
 
   .button {
     @include button-full-width;
@@ -355,6 +373,27 @@ right: 6.2rem;
 
   .complete-look, .customers-bought {
     padding-top: rem-calc(20);
+  }
+
+  .tick-nav {
+    &:after {
+      content:"\f126";
+      position: absolute;
+      right: 0.8rem;
+      top: 0.47rem;
+      font-family: "foundation-icons";
+      display: block;
+      color: lighten($primary-color,50%);
+      font-weight:normal;
+      font-size: rem-calc(14);
+      transition: all 0.2s ease-in-out; 
+    }
+    &:hover {
+      background: rgba(0,0,0,0.05);
+      &:after {
+        right: rem-calc(7);
+      }
+    }
   }
 }
 
